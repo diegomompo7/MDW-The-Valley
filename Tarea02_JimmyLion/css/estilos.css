@@ -1,0 +1,33 @@
+body{
+    font-family: sans-serif;
+    color: #373737;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/*HEADER*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.menu{
+    display: block;
+}
+.menu-list{
+    list-style: none;
+}
+.menu-list-item{
+    display: inline-block;
+}
+.menu-list-item a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #373737;
+    margin-right: 30px;
+}
+.logo-container img{
+    width: 120px;
+}
