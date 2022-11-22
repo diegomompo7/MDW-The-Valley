@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "PacificoFont";
+    src: url(../assets/fonts/Pacifico-Regular.ttf);
+}
+/* ID*/
+#parrafo-principal{
+    color:yellow;
+}
+
+/* Múltiples selectores selectores específicos*/
+h1, h2.titulo-verde {
+    color:green;
+}
+
+/*Clases y Padre y herencia*/
+.titulo-rojo {
+    color: red;
+}
+.titulo-verde {
+    color: green;
+}
+
+/*Selectores por relación*/
+nav a{
+    text-decoration: none;
+}
+
+/*div class*/
+.texto-verde {
+    color: green;
+}
+
+p{
+    color: yellow;
+    background-color: blue;
+    width: 200px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    border: 2px solid red;
+    margin: 50px 10px;
+    padding: 20px 10px;
+}
+
+
+.titulo-seccion-a {
+    font-weight: lighter;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align:center;
+    font-family: 'PacificoFont';
+}
+
+.titulo-seccion-b {
+    font-family: sans-serif;
+    font-weight: 900;
+    text-decoration: line-through;
+    text-transform: lowercase;
+}
+
+.contenedor{
+    width:600px;
+    border: 2px solid black;
+}
