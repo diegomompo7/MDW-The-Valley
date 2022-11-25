@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "ComicNeue";
+    src: url(../assets/fonts/comic-neue/ComicNeue-Regular.ttf);
+}
+body{
+    background-color: #99E2FF;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: "ComicNeue";
+}
+
+/* HEADER */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 75px;
+    padding-left: 30px;
+    border-bottom: 2px solid lightgray;
+}
+.header-logo{
+    align-items: center;
+    height: 40px;
+    padding-top: 15px;
+    padding-left: 70px;
+}
+.header-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+.header-list-text{
+    font-size: 25px;
+    font-weight: bold;
+    padding-right: 75px;
+}
+.header-button{
+    height: 30px;
+    font-family: "ComicNeue";
+    border-radius: 10px;
+    align-items: center;
+    background-color: #80B1FF;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 17px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px 70px 0 0;
+    box-shadow: 0.2rem 0.2rem #6d96d8, -0.2rem -0.2rem
+}
+
+/*VIDEO*/
+
+.video-background{
+    position: relative;
+    
+}
+.video-img{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    top: 150px;
+    left: 680px;
+}
+.video-img-logo{
+    width: 400px;
+
+}
+.video-img-text{
+    width: 200px;
+}
+.video-button{
+    position: absolute;
+    bottom: 150px;
+    left: 800px;
+    font-size: 20px;
+    padding: 10px 60px 10px 60px;
+    font-family: "ComicNeue";
+    background-color: white;
+    color: #5086DC;
+    border-radius: 10px;
+    border: 2px solid #5086DC;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 5rem 0 #5086DC 0 0;
+}
