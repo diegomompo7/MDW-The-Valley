@@ -14,10 +14,13 @@ main, aside {
 
 main {
   background-color: blue;
-  width: 20%;
+  width: 80%;
+}
+p{
+  font-size: 30px;
 }
 
 aside {
   background-color: red;
-  width: 80%;
+  width: 100%;
 }

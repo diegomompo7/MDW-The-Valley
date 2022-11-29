@@ -10,33 +10,35 @@
 </head>
 
 <body>
-    <section>
-        <form class="form">
+    <section class="form-section">
+        <div class="form-container">
             <p class="form-title">Introduce tus datos para crear una cuenta</p>
             <p class="form-subtitle"><i>Los valores marcados con un * son obligatorios</i></p>
+            <form>
 
-            <label class="form-text">NOMBRE*:</label>
-            <br>
-            <input type="text" name="nombre" placeholder="Introduce tu nombre..." required>
-            <br>
+                <label class="form-text">
+                    NOMBRE*:
+                    <input type="text" name="nombre" placeholder="Introduce tu nombre..." required>
+                </label>
 
-            <label class="form-text">PRIMER APELLIDO*:</label>
-            <br>
-            <input type="text" name="primer_apellido" placeholder="Introduce tu primer apellido..." required>
-            <br>
+                <label class="form-text">
+                    PRIMER APELLIDO*:
+                    <input type="text" name="primer_apellido" placeholder="Introduce tu primer apellido..." required>
+                </label>
 
-            <label class="form-text">SEGUNDO APELLIDO:</label>
-            <br>
-            <input type="text" name="segundo_apellido" placeholder="Introduce tu segundo apellido..." optional>
-            <br>
+                <label class="form-text">
+                    SEGUNDO APELLIDO:
+                    <input type="text" name="segundo_apellido" placeholder="Introduce tu segundo apellido..." optional>
+                </label>
 
-            <label class="form-text">DNI*:</label>
-            <br>
-            <input type="text" name="dni" placeholder="Introduce tu DNI..." pattern="[0-9]{8}[A-Za-z]{1}">
-            <br>
-
-            <button type="submit" class="form-btn">REGISTRO</button>
-        </form>
+                <label class="form-text">
+                    DNI*:
+                    <input id="dni" type="text" name="dni" placeholder="Introduce tu DNI..."
+                        pattern="[0-9]{8}[A-Za-z]{1}">
+                </label>
+                <button type="submit" class="form-btn">REGISTRO</button>
+            </form>
+        </div>
     </section>
 </body>
 
