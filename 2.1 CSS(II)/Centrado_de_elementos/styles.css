@@ -1,0 +1,39 @@
+div {
+  width: 1000px;
+  height: 200px;
+  background-color: red;
+}
+
+img{
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.div2 {
+    width: 1000px;
+    height: 200px;
+    background-color: red;
+    text-align: center;
+  }
+  
+.img2{
+    width:100px;
+  }
+
+.padre {
+  width: 1000px;
+  height: 200px;
+  position: relative;
+  background-color: red;
+}
+
+.hijo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}

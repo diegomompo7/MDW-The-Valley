@@ -1,0 +1,62 @@
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+button {
+    padding: 5px;
+    background-color: blue;
+    color: white;
+}
+
+button:active {
+    background-color: red;
+}
+
+input:focus {
+    border: 8px solid pink;
+}
+
+input:checked+span {
+    color: green;
+}
+input:disabled {
+    border: 3px solid red;
+  }
+  input:enabled {
+    border: 3px solid green;
+  }
+  input:required {
+    border: 3px solid pink;
+  }
+  
+  input:optional {
+    border: 3px solid blue;
+  }
+
+input:invalid {
+    border: 3px solid gray;
+}
+
+input:valid {
+    border: 3px solid gold;
+}
+input:out-of-range {
+    color:red;
+}
+
+input:in-range {
+    color:green;
+}
+
+p:not(.parrafo-principal) {
+    color:grey;
+   }

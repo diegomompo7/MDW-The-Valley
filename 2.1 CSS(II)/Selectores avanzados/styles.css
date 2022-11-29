@@ -1,0 +1,38 @@
+/*HIJOS DIRECTOS*/
+.contenedor1 > h1{
+    color: aqua;
+}
+
+/*SELECCIONA TODO*/
+* .titulo-a{
+    color: blue;
+    margin: 0;
+}
+/*ADYACENTES*/
+.titulo-a + .titulo-b{
+    color: red;
+}
+/*TODOS LOS POSTERIORES*/
+.titulo-a ~ .titulo-c{
+    color: green;
+}
+
+/*COMPUESTOS*/
+.titulo-a.titulo-b{
+    color: brown;
+}
+li:first-child{
+    color:chocolate;
+}
+li:last-child{
+    color: blueviolet;
+}
+li:nth-child(2){
+    color:pink
+}
+a[href="http://www.marca.com"]{
+    color: cornflowerblue;
+}
+a[href="http://www.as.com"]{
+    color: crimson;
+}
