@@ -48,18 +48,18 @@ input {
     padding-bottom: 2%;
     margin-bottom: 7%;
 }
-input:required{
-    border:1px solid  black;
-    border-left: 2px solid #0000ff;
-}
 input:optional{
     border:1px solid  black;
 }
 input:focus{
     border: 3px solid #0000ff;
 }
-#dni:invalid{
+input:invalid{
     border-left: 2px solid red;
+}
+input:required{
+    border:1px solid  black;
+    border-left: 2px solid #0000ff;
 }
 
 .form-btn {
