@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "Heura";
+    src: url(../assets/fonts/Heura.woff);
+}
+@media screen and (max-width: 1024px) {
+    .header-list-text{
+        visibility: hidden;
+        display: none;
+    }
+}
+@media screen and (min-width: 1025px) {
+    .icon-menu-svgrepo-com{
+        visibility: hidden;
+        display: none;
+    }
+    .div-container-menu{
+        visibility: hidden;
+        display: none;
+    }
+}
+header{
+    height: 198px;
+}
+.header{
+    display: flex;
+    background-color: #f9e021;
+    justify-content: space-between;
+    padding-top: 6vh;
+}
+
+.div-container-img{
+    width: 9%;
+    padding-top: 1vw;
+    padding-left: 4vw;
+}
+.header-img{
+    height: 23%;
+    
+}
+.header-list{
+    display:flex;
+    width: 87%;
+    padding-left: 31%;
+}
+.header-list-text{
+    font-family: "Heura";
+    font-size: 1.6vw;
+}
+
+.div-container-menu{
+    display:flex;
+    padding-right: 40px;
+    width: 6%;
+
+}
+.icon-menu-svgrepo-com{
+    font-size: 50px;
+}
+ul:hover{
+    color: white;
+    text-decoration: underline;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    animation: headShake;
+    animation-duration: 2s;
+}
