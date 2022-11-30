@@ -7,9 +7,15 @@
         visibility: hidden;
         display: none;
     }
+    .header-list{
+        padding-left: 0%;
+    }
+    .fa-bars{
+        padding-top: 20%
+    }
 }
 @media screen and (min-width: 1025px) {
-    .icon-menu-svgrepo-com{
+    .fa-bars{
         visibility: hidden;
         display: none;
     }
@@ -29,38 +35,48 @@ header{
 }
 
 .div-container-img{
-    width: 9%;
-    padding-top: 1vw;
+    width: 30%;
     padding-left: 4vw;
 }
 .header-img{
     height: 23%;
     
 }
+nav{
+    display: flex;
+    width:70%;
+    justify-content: space-evenly;
+}
 .header-list{
-    display:flex;
-    width: 87%;
-    padding-left: 31%;
+    display: flex;
+    list-style: none;
 }
 .header-list-text{
+    position: initial;
     font-family: "Heura";
-    font-size: 1.6vw;
+    font-size: 1.9rem;
+    padding-right: 4rem;
 }
 
 .div-container-menu{
-    display:flex;
-    padding-right: 40px;
-    width: 6%;
+    width: 12ex;
+    height: 12ex;
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    background-color: white;
 
 }
-.icon-menu-svgrepo-com{
-    font-size: 50px;
+.fa-bars{
+    text-align: center;
+    font-size: 3rem;
+    color: black;
 }
-ul:hover{
+li:hover{
     color: white;
     text-decoration: underline;
-    transition-duration: 2s;
+    transition-duration: 1s;
     transition-timing-function: linear;
-    animation: headShake;
-    animation-duration: 2s;
+    animation: flash;
+    animation-duration: 0.5s;
 }
