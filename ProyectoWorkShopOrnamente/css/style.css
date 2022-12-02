@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Rubik+Distressed&display=swap');
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    height: 200px;
+}
+.banner{
+    height: 100%;
+    width: 100%;
+}
+.header-language{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+}
+.header-language-text{
+    text-align: center;
+    color: gray;
+    margin: 0 10px;
+}
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+span{
+    font-size: 5vw;
+    margin: 0 5vw;
+}
+.header-logo img{
+    width: 50vw;
+}
+.home-img{
+    width: 100vw;
+}
+
+.product-img{
+    width: 100vw;
+}
+
+.other-product-img{
+    width: 100vw;
+}
