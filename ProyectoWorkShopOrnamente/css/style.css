@@ -86,12 +86,12 @@ span{
     width: 100%;
 }
 .product-title{
-    font-size: 30px;
+    font-size: 1.25em;
     font-weight: 400;
     margin: 10px;
 }
 .product-subtitle{
-    font-size: 20px;
+    font-size: 0.75em;
     font-weight: 400;
     margin: 0px;
 }
@@ -109,13 +109,13 @@ span{
 .other-product-img{
     width: 100%;
 }
-.other-product-title{
-    font-size: 30px;
+.product-title{
+    font-size: 1.25em;
     font-weight: 400;
     margin: 10px;
 }
-.other-product-subtitle{
-    font-size: 20px;
+.product-subtitle{
+    font-size: 0.75em;
     font-weight: 400;
     margin: 0px;
 }
@@ -261,7 +261,7 @@ footer{
     .other-products-container{
         text-align: center;
     }
-    .other-products-item{
+    .other-product-item{
         width: 20%;
     }
     .other-product-img{
