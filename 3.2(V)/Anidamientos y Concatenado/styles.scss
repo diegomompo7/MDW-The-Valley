@@ -1,0 +1,29 @@
+nav {
+    ul {
+         /* estilos */
+    }
+    li {
+       /* estilos */
+    }
+    a {
+       /* estilos */
+    }
+}
+
+.bender{
+    &__head{
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+    }
+    &__body{
+        background-color: red;
+        width: 100px;
+        height: 100px;
+    }
+    &__legs{
+        background-color: pink;
+        width: 100px;
+        height: 100px;
+    }
+}

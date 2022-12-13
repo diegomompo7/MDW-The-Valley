@@ -1,0 +1,9 @@
+$base-color: green;
+$theme-msg:(
+    "ok": green,
+    "ko": red,
+    "warning":yellow
+);
+h1 {
+   color: map-get($theme-msg, "ko");
+}
