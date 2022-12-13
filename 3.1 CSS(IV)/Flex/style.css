@@ -1,0 +1,23 @@
+.flex-container{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: plum;
+    justify-content: center;
+    justify-content: space-evenly;
+    height: 300px;
+    /*align-content: flex-start;*/
+    border: 2px solid black;
+}
+.flex-item{
+    background-color: darkorchid;
+    height: 100px;
+    margin: 10px;
+    color: white;
+    flex-grow: 1;
+}
+.flex-item:first-child{
+    flex: 2 1 25%;
+}
+.flex-item:last-child{
+    flex-basis: 25%;
+}
