@@ -1,0 +1,94 @@
+.card {
+  max-width: 768px;
+  background-color: black;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 45%;
+  }
+}
+.card__header {
+  width: 50%;
+  justify-content: center;
+}
+.card__title {
+  padding-top: 10px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .card__title {
+    font-size: 28px;
+  }
+}
+.card__body {
+  padding: 25px;
+}
+.card__image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 40%;
+}
+@media screen and (min-width: 1024px) {
+  .card__image {
+    width: 50%;
+  }
+}
+.card__subtitle {
+  color: white;
+  font-size: 30px;
+  align-content: flex-start;
+  padding-top: 50px;
+}
+.card__text {
+  padding-top: 20px;
+  color: lightgray;
+}
+@media screen and (min-width: 1024px) {
+  .card__text {
+    font-size: 17px;
+  }
+}
+.card__footer {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card__button {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  padding: 15px;
+  font-size: 14px;
+}
+.card--black {
+  background-color: white;
+  max-width: 768px;
+}
+.card--black .card__title, .card--black .card__subtitle {
+  color: black;
+}
+.card--black .card__button {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+
+* {
+  margin: 0 auto;
+}
+
+body {
+  max-width: 1440px;
+  font-family: monospace;
+  font-weight: lighter;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}/*# sourceMappingURL=main.css.map */

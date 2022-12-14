@@ -1,0 +1,14 @@
+$media-mobile: 768px;
+$media-monitor: 1024px;
+
+@mixin flexible {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@mixin monitor(){
+    @media screen and (min-width: $media-monitor) {
+    @content;
+  }
+}
