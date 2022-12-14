@@ -1,0 +1,72 @@
+@mixin themeh1(){
+    color: red;
+}
+@mixin themeh2($value-one){
+    color: $value-one;
+}
+@mixin header($value-one , $value-two){
+    background-color: $value-one;
+    font-size: $value-two;
+}
+.header {
+    @include header(lime,  22px);
+}
+h1{
+    @include themeh1()
+}
+h2{
+    @include themeh2(blue)
+
+}
+
+$media-mobile: 480px;
+$media-tablet: 768px;
+
+@mixin mobile(){
+    @media screen and (max-width: $media-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet(){
+    @media screen and (max-width: $media-tablet) {
+    @content;
+  }
+}
+
+.header{
+    height: 150px;
+    @include tablet() {
+        height: 100px;
+    }
+    .nav{
+        // otros estilos
+    }
+}
+//FLEX
+
+@mixin flexible( $dis , $direction , $cut , $just , $align ){
+    display         : $dis;
+    flex-flow       : $direction $cut;
+    justify-content : $just;
+    align-items     : $align;
+}
+
+.header{
+    @include flexible( flex , row , nowrap , center , center );
+}
+section{
+    @include flexible( flex , column , nowrap , flex-start , flex-start );
+}
+
+//GRID
+
+@mixin grid($size, $gap) {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax($size, 1fr));
+    gap: $gap;
+}
+
+.header{
+    @include grid(200px, 10px)
+}

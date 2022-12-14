@@ -1,0 +1,40 @@
+.header {
+  background-color: lime;
+  font-size: 22px;
+}
+
+h1 {
+  color: red;
+}
+
+h2 {
+  color: blue;
+}
+
+.header {
+  height: 150px;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    height: 100px;
+  }
+}
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}/*# sourceMappingURL=styles.css.map */

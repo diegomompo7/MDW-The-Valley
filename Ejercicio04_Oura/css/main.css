@@ -1,0 +1,75 @@
+.card {
+  width: 500px;
+  background-color: white;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  margin: 20px;
+  overflow: hidden;
+}
+.card__imagen {
+  width: 100%;
+}
+.card__body {
+  padding: 20px;
+}
+.card__title {
+  margin: 0;
+  color: #0D1623;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+.card__subtitle {
+  color: #0D1623;
+  font-weight: lighter;
+  margin: 20px 0;
+  font-size: 30px;
+  font-style: italic;
+}
+.card__copy {
+  color: #999;
+  font-weight: lighter;
+}
+.card__footer {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__button {
+  color: #0D1623;
+  background-color: white;
+  border: 1px solid #0D1623;
+  border-radius: 30px;
+  padding: 15px;
+  font-size: 14px;
+}
+.card__button:hover {
+  background-color: #0D1623;
+  color: white;
+}
+.card--reverse {
+  background-color: #0D1623;
+}
+.card--reverse .card__title, .card--reverse .card__subtitle {
+  color: white;
+}
+.card--reverse .card__button {
+  color: white;
+  background-color: #0D1623;
+  border: 1px solid white;
+}
+.card--reverse .card__button:hover {
+  background-color: white;
+  color: #0D1623;
+}
+
+body {
+  background-color: #E5DED3;
+  padding: 20px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  font-weight: lighter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=main.css.map */
