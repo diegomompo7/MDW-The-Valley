@@ -1,0 +1,30 @@
+@mixin flexible( $dis, $just , $align, $direction ){
+    display         : $dis;
+    justify-content : $just;
+    align-items     : $align;
+    flex-direction      : $direction;
+}
+@mixin grid($grid, $column, $row, $gap) {
+    display:$grid;
+    grid-template-columns: repeat($column, 1fr);
+    grid-template-rows: ($row, 1fr);
+    gap: $gap;
+}
+
+@mixin tablet(){
+    @media screen and (min-width: $min-tablet) and (max-width: $max-tablet) {
+    @content;
+  }
+}
+
+@mixin laptop(){
+    @media screen and (min-width: $min-laptop) and (max-width: $max-laptop) {
+    @content;
+  }
+}
+@mixin desktop(){
+    @media screen and (min-width: $min-desktop) {
+    @content;
+  }
+}
+
