@@ -1,0 +1,151 @@
+.review {
+    display: grid;
+    width: $max-width;
+    padding: 20px;
+    background-size: 1000px;
+    background-position: 0 100px;
+    background-image: url('../assets/burger.png');
+    background-repeat: no-repeat;
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px 300px 300px 350px 520px;
+    row-gap: 30px;
+    justify-content: center;
+
+    @include tablet(){
+        background-size: 100%;
+    }
+    @include laptop(){
+        @include grid(grid, 3, 3, 30px);
+        background-size: 80%;
+    }
+    @include desktop(){
+        @include grid(grid, 4, 2, 30px);
+        background-size: 50%;
+    }
+
+    &__box {
+        padding: 30px;
+        @include bRadius(15px);
+        @include shadow(0px, 11px, 23px, -3px, rgba(0, 0, 0, 0.3));
+
+    }
+
+    &__box-back {
+        z-index: -1;
+        justify-content: flex-end;
+
+    }
+
+    &__customer {
+        display: flex;
+        align-items: center;
+    }
+
+    &__customer-img {
+        overflow: hidden;
+        @include bRadius(50px);
+        @include size(50px, 50px);
+        margin-right: 10px;
+    }
+
+    &__customer-img img {
+        width: $max-width;
+    }
+
+    &__customer-info p {
+        padding: 1px;
+        margin: 0px;
+    }
+
+    &__customer-name {
+        color: $first-color;
+        @include fontSize(18px);
+        font-weight: bold;
+    }
+
+    &__customer-name--opposite {
+        color: $second-color;
+        @include fontSize(16px);
+        font-weight: bold;
+    }
+
+    &__customer-desc {
+        color: $fourth-color;
+        @include fontSize(12px);
+    }
+
+    &__customer-text1 {
+        color: $first-color;
+        @include fontSize(23px);
+
+    }
+
+    &_customer-text1--opposite {
+        color: $second-color;
+        @include fontSize(23px);
+
+    }
+
+    &__customer-text2 {
+        color: $fourth-color;
+        @include fontSize(16px);
+    }
+}
+
+.box-1 {
+    grid-area: 1 / 1 / span 1 / span 1;
+    background-size: 140px;
+    background-position: 85% 0px;
+    background-color: $third-color;
+    background-image: url('../assets/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+
+    @include laptop(){
+        grid-area: 1 / 1 / span 1 / span 2;
+    }
+    @include desktop(){
+        grid-area: 1 / 1 / span 1 / span 2;
+    }
+}
+
+.box-2 {
+    grid-area: 2 / 1 / span 1 / span 1;
+    background-color: $second-color;
+    @include laptop(){
+        grid-area: 1 / 3 / span 1 / span 1;
+    }
+    @include desktop(){
+        grid-area: 1 / 3 / span 1 / span 1;
+    }
+}
+
+.box-3 {
+    grid-area: 3 / 1 / span 1 / span 1;
+    background-color: $first-color;
+    @include laptop(){
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+    @include desktop(){
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+}
+
+.box-2--position {
+    grid-area: 4 / 1 / span 1 / span 1;
+    @include laptop(){
+        grid-area: 2 / 2 / span 1 / span 2;
+    }
+    @include desktop(){
+        grid-area: 2 / 2 / span 1 / span 2;
+    }
+}
+
+.box-3--position {
+    grid-area: 5 / 1 / span 1 / span 1;
+    @include laptop(){
+        grid-area: 3 / 1 / span 1 / span 3;
+    }
+    @include desktop(){
+        grid-area: 1 / 4 / span 2 / span 1;
+    }
+}

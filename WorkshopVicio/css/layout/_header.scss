@@ -1,0 +1,45 @@
+.header {
+    @include flexible(flex, space-between, center, empty(), empty());
+    padding-top: 30px;
+    @include margin(0, 10px);
+
+    &__button {
+        background-color: $first-color;
+        @include size(100px, 40px);
+        border-top-left-radius: $border-box;
+        border-top-right-radius: $border-box;
+        border-bottom-left-radius: $border-box;
+        border-bottom-right-radius: $border-box;
+        font-weight: bold;
+    }
+}
+
+.title {
+    @include size(65%, empty());
+    @include margin(50px, empty());
+    @include tablet(){
+        width: $max-width;
+    }
+    @include laptop(){
+        width: $max-width;
+    }
+    @include desktop(){
+        @include size(80%, empty());
+    }
+
+    &__text {
+        font-weight: bolder;
+        @include flexible(flex, flex-start, empty(), empty(), empty());
+        @include fontSize (30px);
+        line-height: 0.8;
+        @include tablet(){
+            @include fontSize (50px);
+        }
+        @include laptop(){
+            @include fontSize (60px);
+        }
+        @include desktop(){
+            @include fontSize (70px);
+        }
+    }
+}

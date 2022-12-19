@@ -1,13 +1,13 @@
-@mixin flexible( $dis, $just , $align, $direction ){
-    display         : $dis;
-    justify-content : $just;
-    align-items     : $align;
-    flex-direction      : $direction;
+@mixin flexible( $dis , $just , $align, $direction , $cut ){
+  display         : $dis;
+  justify-content : $just;
+  align-items     : $align;
+  flex-flow       : $direction $cut;
 }
 @mixin grid($grid, $column, $row, $gap) {
     display:$grid;
     grid-template-columns: repeat($column, 1fr);
-    grid-template-rows: ($row, 1fr);
+    grid-template-rows: repeat($row, 1fr);
     gap: $gap;
 }
 

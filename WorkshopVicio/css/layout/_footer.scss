@@ -1,0 +1,60 @@
+.footer {
+    @include flexible(flex, empty(), center, column, empty());
+
+    @include laptop(){
+        width: $max-width;
+        flex-direction: row;
+        justify-content: space-between;
+        @include padding(0, 20px)
+    }
+    @include desktop(){
+        width: $max-width;
+        flex-direction: row;
+        justify-content: space-between;
+        @include padding(40px, 20px)
+    }
+    &__list,
+    &__legal {
+        list-style: none;
+        text-align: center;
+        line-height: 1.5;
+
+        @include laptop(){
+            display: flex;
+            padding: 0;
+        }
+        @include desktop(){
+            display: flex;
+            padding: 0;
+        }
+    }
+    &__list li{
+        @include laptop(){
+            margin-right: 8px;
+        }
+        @include desktop(){
+            margin-right: 8px;
+        }
+    }
+    &__legal li{
+        @include laptop(){
+            margin-right: 8px;
+        }
+        @include desktop(){
+            margin-right: 8px;
+        }
+    }
+
+    &__list &__item a {
+        text-decoration: none;
+        font-weight: bold;
+        color: $second-color;
+    }
+
+    &__legal &__item a {
+        text-decoration: none;
+        color: $fourth-color;
+        @include fontSize(12px);
+
+    }
+}
