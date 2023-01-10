@@ -79,7 +79,8 @@ let playerList = [
 ];
 
 function winner(list){
-  return list.sort((a, b) => b.score - a.score);
+  list.sort((a, b) => b.score - a.score);
+  return list[0]
 }
 
 console.log(winner(playerList));
