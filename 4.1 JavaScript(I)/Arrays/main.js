@@ -26,7 +26,6 @@ console.log(familiaSimpson); //Mostrará el listado añadiendo al final a Bola d
 familiaSimpson.push("Ayudante de Santa Claus", "Abe");
 console.log(familiaSimpson); //Mostrará el listado añadiendo al final a Ayudante de Santa Claus y a Abe
 
-
 familiaSimpson.reverse();
 console.log(familiaSimpson); //Mostrará el listado al revés
 
