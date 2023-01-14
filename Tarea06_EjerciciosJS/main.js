@@ -7,6 +7,7 @@ let sentence = 'Hola soy Edu Feliz Navidad';
 
 function noVowels(str){
         return str.replace(/[AaEeIiOoUu]/g, '');
+
 }
 
 console.log(noVowels(sentence));
@@ -80,7 +81,7 @@ let playerList = [
 
 function winner(list){
   list.sort((a, b) => b.score - a.score);
-  return list[0]
+  return list[0].name;
 }
 
 console.log(winner(playerList));
