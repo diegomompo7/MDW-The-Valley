@@ -276,3 +276,113 @@ let ordenarRegalos = (listReg, order) => {
 }
 
 console.log(ordenarRegalos(regalos, 'nombre'));
+
+/* 
+        Crea una función que reciba un listado de jugadores con el número de 
+        billetes de cada cantidad que tienen y devuelva el jugador con más dinero. 
+
+        No habrá más de un jugador que tenga el mayor número de billetes
+
+        Ejemplo:
+       Entrada:
+            [{nombre: ‘Pedro’, billetesDe5: 10, billetesDe10: 3, billetestDe50: 1 },
+            {nombre: ‘Luis’, billetesDe5: 10, billetesDe10: 1, billetestDe50: 2 },
+                {nombre: ‘Gon’, , billetesDe5: 5, billetesDe10: 5, billetestDe50: 5 },];
+
+            Salida:
+                Gon
+*/ 
+
+console.log("KATA 10");
+
+let money = 
+    [{nombre: 'Pedro', billetesDe5: 10, billetesDe10: 3, billetesDe50: 1 },
+    {nombre: 'Luis', billetesDe5: 10, billetesDe10: 1, billetesDe50: 2 },
+    {nombre: 'Gon', billetesDe5: 5, billetesDe10: 5, billetesDe50: 5 },];
+
+let bestMoney = (moneyPlayer) => {
+    
+    let actualMoney = 0;
+    let countMoney = 0;
+
+    let winner = []
+
+    for(let i=0; i<moneyPlayer.length;i++){
+        countMoney = (moneyPlayer[i].billetesDe5 *  5) + (moneyPlayer[i].billetesDe10 *  10) + (moneyPlayer[i].billetesDe50 *  50);
+        console.log("El juagdor " + moneyPlayer[i].nombre +  " tiene " + countMoney);
+        
+        if(countMoney > actualMoney){
+            actualMoney = countMoney
+            winner = moneyPlayer[i].nombre, countMoney           
+        }
+    }
+    return winner;
+}
+
+console.log(bestMoney(money))
+
+/* 
+    Crea una función que reciba un listado y mueva todos los 0 al final, 
+    manteniendo el orden del resto de elementos.
+
+    Ejemplo:
+       Entrada: [1,0,true,0,’hola’, 5, 30, ‘a’]
+       Salida: [1,true,’hola’, 5, 30, ‘a’,0,0]
+*/ 
+
+console.log("KATA 11")
+
+arrayVarius = [1,0,true,0,'hola', 5, 30, 'a']
+
+let separeZero = (arrayV) =>{
+    let NonZeroContent = []
+    let ZeroContent = []
+
+    for(let i=0; i<arrayV.length; i++){
+        if(arrayV[i] === 0){
+            ZeroContent.push(arrayV[i])
+        }else{
+            NonZeroContent.push(arrayV[i])
+        }
+    }
+
+    let resVarius = NonZeroContent.concat(ZeroContent)
+
+    return resVarius 
+}
+
+console.log(separeZero(arrayVarius));
+
+/* 
+    Crea una función que reciba un listado de strings y devuelva 
+    el string diferente al resto.
+
+    Serán strings sin espacios.
+
+    Ejemplo:
+
+     Entrada: [ 'Aa', 'aaa', 'aaaaa', 'BbBb', 'Aaaa', 'AaAaAa', 'a' ]
+     Salida : 'BbBb’
+
+     Entrada: ['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba’]
+     Salida : 'foo’
+*/
+
+console.log("KATA 12")
+
+let arrayDif = [ 'Aa', 'aaa', 'aaaaa', 'BbBb', 'Aaaa', 'AaAaAa', 'a' ]
+
+let lookDif = (arrDif) => {
+
+    let resDif = []
+
+    for(let i=0; i<arrDif.length-1; i++){
+        if(arrDif[i+1].includes(arrayDif[i]) === False){
+            resDif.push(arrDif);
+        }
+    }
+}
+
+
+
+console.log(lookDif(arrayDif))
