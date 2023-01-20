@@ -73,7 +73,7 @@ let forbesTotalAge = forbesAge.reduce((count, age)=> (count + age), 0)
 let forbesAverageAge = forbesTotalAge / forbesAge.length;
 console.log(forbesAverageAge)
 
-//EJERCICIO 5------------------------------------------------------------------------------
+//EJERCICIO 5 ------------------------------------------------------------------------------
 
 let forbesEEUUTech = forbesList.filter(forbesList => forbesList.country === 'EEUU' && forbesList.industry === 'Technology')
 console.log(forbesEEUUTech) 
@@ -81,7 +81,7 @@ console.log(forbesEEUUTech)
 let forbesTotalEEUUTech = forbesEEUUTech.reduce((acc, money) => acc+money.amount, 0)
 console.log(forbesTotalEEUUTech) 
 
-//EJERCICIO 6------------------------------------------------------------------------------
+//EJERCICIO 6 ------------------------------------------------------------------------------
 
 let forbesYoungest = forbesList.filter(forbesList => forbesList.country != 'EEUU')
 console.log(forbesYoungest)
@@ -91,7 +91,7 @@ let youngMillion = forbesYoungest.reduce( function(youngest, million){
   },{});
   console.log(youngMillion)
 
-//EJERCICIO 7------------------------------------------------------------------------------
+//EJERCICIO 7 ------------------------------------------------------------------------------
 
 let forbesOrderAmount = forbesList.sort(forbesList.amount)
 console.log(forbesOrderAmount)
@@ -104,7 +104,7 @@ let forbesOldest = forbesTOP5Million.reduce((oldest, million) =>
 console.log(forbesOldest)
 
 
-//EJERCICIO 8------------------------------------------------------------------------------
+//EJERCICIO 8 ------------------------------------------------------------------------------
 
 let forbesGoogleMicrosoft = forbesList.filter(forbesList => forbesList.company === 'Google' || forbesList.company === 'Microsoft')
 console.log(forbesGoogleMicrosoft)

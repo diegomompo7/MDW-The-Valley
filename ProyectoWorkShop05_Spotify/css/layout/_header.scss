@@ -1,0 +1,6 @@
+.spotify{
+    @include flexible(flex, center, empty(), empty(), empty());
+}
+.spotify img{
+    width: 80%;
+}

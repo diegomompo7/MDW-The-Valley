@@ -1,0 +1,42 @@
+/*#72FFB6, #10D164, #efefef, white, black, lightgray*/
+.player {
+  padding-top: 40px;
+  max-width: 400px;
+}
+.player__cover {
+  display: flex;
+  justify-content: center;
+  align-items: empty();
+  flex-flow: empty() wrap;
+}
+.player__cover img {
+  width: 80%;
+}
+.player__reproductor__title {
+  text-align: center;
+  font-size: 16px;
+}
+.player__reproductor__time {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: empty() empty();
+}
+.player__reproductor__options {
+  display: flex;
+  justify-content: space-between;
+  align-items: empty();
+  flex-flow: empty() empty();
+}
+
+.spotify {
+  display: flex;
+  justify-content: center;
+  align-items: empty();
+  flex-flow: empty() empty();
+}
+
+.spotify img {
+  width: 80%;
+}/*# sourceMappingURL=main.css.map */
