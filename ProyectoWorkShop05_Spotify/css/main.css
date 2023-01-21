@@ -1,42 +1,178 @@
-/*#72FFB6, #10D164, #efefef, white, black, lightgray*/
-.player {
-  padding-top: 40px;
-  max-width: 400px;
+/* 
+RESET SHEET - Josh W. Comeau
+*/
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;700;800&display=swap");
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-.player__cover {
+
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html {
+  font-size: 20px;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Removing built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*END OF RESET SHEET*/
+body {
+  background-color: #1db954;
+  color: #191414;
+  font-family: "Figtree", Helvetica, sans-serif;
   display: flex;
   justify-content: center;
-  align-items: empty();
-  flex-flow: empty() wrap;
-}
-.player__cover img {
-  width: 80%;
-}
-.player__reproductor__title {
-  text-align: center;
-  font-size: 16px;
-}
-.player__reproductor__time {
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-flow: empty() empty();
-}
-.player__reproductor__options {
-  display: flex;
-  justify-content: space-between;
-  align-items: empty();
-  flex-flow: empty() empty();
+  flex-direction: column;
 }
 
 .spotify {
   display: flex;
   justify-content: center;
-  align-items: empty();
-  flex-flow: empty() empty();
+  align-items: center;
+  margin: 20px 0px 50px;
+}
+.spotify__logo {
+  width: 300px;
 }
 
-.spotify img {
-  width: 80%;
+.cover {
+  width: 340px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  min-width: 340px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.player__details {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.player__details--song {
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 10px;
+}
+.player__details--artist {
+  font-size: 14px;
+  font-weight: 800;
+}
+.player__time {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 12px 0px;
+}
+.player__time--timer {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0px 20px;
+}
+.player__bar {
+  display: flex;
+  margin: 0px 20px;
+  width: 300px;
+  height: 10px;
+  background-color: #b3b3b3;
+}
+.player__bar--top {
+  width: 0%;
+  height: 10px;
+  background-color: #191414;
+}
+.player__controls {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 5px 0px;
+}
+.player__controls--btn {
+  font-size: 14px;
+  margin: 0px 20px;
+}
+.player__media {
+  display: flex;
+  justify-content: center;
+}
+.player__media--btn {
+  font-size: 25px;
+  margin: 10px 15px 30px;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    width: 700px;
+  }
+  .cover {
+    width: 40%;
+  }
+  .player {
+    width: 60%;
+    flex-direction: column;
+  }
+  .player__bar {
+    width: 380px;
+  }
 }/*# sourceMappingURL=main.css.map */

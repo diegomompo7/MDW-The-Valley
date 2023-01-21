@@ -4,9 +4,6 @@
 @mixin margin($row, $column) {
     margin: $row $column;
 }
-@mixin padding($row, $column) {
-    margin: $row $column;
-}
 @mixin size($width, $height) {
     width: $width;
     height: $height;

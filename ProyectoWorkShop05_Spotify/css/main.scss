@@ -1,7 +1,132 @@
-@import 'utilities/variables';
-@import 'utilities/functions';
-@import 'utilities/mixins';
-@import 'base/reset';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
+@import '__variables';
+@import '__reset';
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;700;800&display=swap');
+
+body {
+	background-color: $body-bg;
+	color: $text-elements;
+	font-family: 'Figtree', Helvetica, sans-serif;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.spotify {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin: 20px 0px 50px;
+
+	&__logo {
+		width: 300px;
+	}
+}
+
+//Album cover:
+
+.cover {
+	width: 340px;
+}
+
+.player {
+	display: flex;
+	flex-direction: column;
+	min-width: 340px;
+
+	background-color: $box-bg;
+	box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+
+	//Media-player
+
+	&__details {
+		text-align: center;
+		margin-bottom: 20px;
+
+		&--song {
+			font-size: 20px;
+			font-weight: 800;
+			margin-top: 10px;
+		}
+
+		&--artist {
+			font-size: 14px;
+			font-weight: 800;
+		}
+	}
+
+	&__time {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		margin: 12px 0px;
+
+		&--timer {
+			font-size: 14px;
+			font-weight: 700;
+			margin: 0px 20px;
+		}
+	}
+
+	&__bar {
+		display: flex;
+		margin: 0px 20px;
+		width: 300px;
+		height: 10px;
+		background-color: $bar-empty;
+
+		&--top {
+			width: 0%;
+			height: 10px;
+			background-color: $bar-elapsed;
+
+		}
+	}
+
+	&__controls {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		margin: 5px 0px;
+
+		&--btn {
+			font-size: 14px;
+			margin: 0px 20px;
+		}
+	}
+
+	&__media {
+		display: flex;
+		justify-content: center;
+
+		&--btn {
+			font-size: 25px;
+			margin: 10px 15px 30px;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	body {
+	}
+
+	main {
+		display: flex;
+		width: 700px;
+	}
+
+	.cover {
+		width: 40%;
+	}
+
+	.player {
+		width: 60%;
+		flex-direction: column;
+
+		&__bar {
+			width: 380px;
+		}
+	}
+}

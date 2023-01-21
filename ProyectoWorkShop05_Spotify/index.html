@@ -4,56 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./script/main.js" defer></script>
     <script src="https://kit.fontawesome.com/3946066a81.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Spotify Mini-player</title>
 </head>
 
+
 <body>
-    <header>
-        <div class="spotify">
-            <img src="./assets/logo.png" alt="Logo Spotify">
-        </div>
+    <!--Logo-->
+    <header class="spotify">
+        <img class="spotify__logo" src="./assets/logo.png" alt="Logo">
     </header>
-    <div class="player">
-        <div class="player__cover">
-            <img src="assets/tangana_cover.png" alt="">
+
+
+    <main>
+        <div class="cover">
+            <img class="player__cover--img" src="./assets/tangana_cover.png" alt="COVER">
         </div>
-        <div class="player__reproductor">
-            <div class="player__reproductor__title">
-                <h2 class="player__reproductor__title-song">Name Song</h2>
-                <h3 class="player__reproductor__title-artist">Artist Name</h3>
-            </div>
-            <div class="player__reproductor__time">
-                <p class="player__reproductor__time-start">00:02</p>
-                <p class="player__reproductor__time-end">00:05</p>
-            </div>
-            <div class="player__reproductor__bar">
-                <span></span>
-            </div>
-            <div class="player__reproductor__options">
-                <span class="player__reproductor__time-random">
-                    <i class="fa-solid fa-shuffle"></i>
-                </span>
-                <span class="player__reproductor__time-repeat">
-                    <i class="fa-solid fa-rotate-right"></i>
-                </span>
-            </div>
-            <div class="player__reproductor__buttons">
-                <span class="player__reproductor__buttons-back">
-                    <i class="fa-solid fa-backward-step"></i>
-                </span>
-                <span class="player__reproductor__buttons-play">
-                    <i class="fa-solid fa-play"></i>
-                </span>
-                <span class="player__reproductor__buttons-forward">
-                    <i class="fa-solid fa-forward-step"></i>
-                </span>
+
+
+        <div class="player">
+            <!--Media-->
+            <div class="player__details">
+                <h2 class="player__details--song">Song name</h2>
+                <h3 class="player__details--artist">Artist name</h3>
             </div>
 
+            <div class="player__time">
+                <p class="player__time--timer">00:00</p>
+                <p class="player__time--timer">2:30</p>
+            </div>
+
+            <div class="player__bar">
+                <span class="player__bar--top"></span>
+            </div>
+
+            <div class="player__controls">
+                <p id="shuffle" class="player__controls--btn"><i class="fa-solid fa-shuffle"></i></p>
+                <p id="repeat" class="player__controls--btn"><i class="fa-solid fa-repeat"></i></p>
+            </div>
+
+            <div class="player__media">
+                <span class="player__media--btn" id="btn-back">
+                    <i  class="fa-solid fa-backward-step"></i>
+                </span>
+                <span class="player__media--btn" id="btn-play">
+                    <i  class="fa-solid fa-play"></i>
+                </span>
+                <span class="player__media--btn" id="btn-foward">
+                    <i  class="fa-solid fa-forward-step"></i>
+                </span>
+            </div>
         </div>
-    </div>
+    </main>
+
+
+
 </body>
 
 </html>
