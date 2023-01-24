@@ -1,0 +1,52 @@
+COMANDOS BÁSICOS
+
+git init
+git clone
+git status
+git add nombre1.html nombre2.js
+git add - A
+git add --all
+git commit -m "Nuestro primer commit del proyecto"
+git push
+git pull
+
+------------------------------------------------------------------------------------------------------------------------------
+
+TRABAJANDO CON CAMBIOS
+
+git reset HEAD path/fichero: quitar ficheros que tenemos en fase stage
+git checkout -- path/fichero: volver al estado inicial de un fichero
+git reset HEAD~1: Para eliminar un commit y no subirlo al repositorio remoto hacemos:
+git log: permite ver los commits realizados:
+git checkout referencia-commit: movernos al commit que queramos
+git checkout main: posición donde estamos
+
+------------------------------------------------------------------------------------------------------------------------------
+
+RAMAS
+
+git branch nombre: creamos la rama
+git checkout nombre: nos posicionamos en ella
+git checkout -b nombre: Alternativa rápida (crea y posiciona)
+git push -u origin nombre: push de la rama al repositorio remoto
+
+#Opción 1 (trae las referencias)
+git fetch
+
+#Opción 2 (se baja toda la info)
+git pull
+
+Crearemos la rama desde la web de github.
+Para que el repositorio local se entere de la nueva rama habrá que usar:
+------------------------------------------------------------------------------------------------------------------------------
+
+FLOW
+
+git flow : metodología que establece la estructura de ramas y flujo de trabajo dentro de un proyecto
+------------------------------------------------------------------------------------------------------------------------------
+
+MERGE
+
+git merge rama -m "comentario"
+
+git commit -m "Merge branch rama into rama"
