@@ -1,0 +1,58 @@
+body{
+    font-family: monospace;
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    margin: 150px 0;
+}
+.titleAge{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputName{
+    display: flex;
+    justify-content: center;
+    max-width: 350px;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px;
+    background-color: white;
+    border-radius: 10px;
+    
+
+    &__text{
+        font-size: 18px;
+    }
+
+    &__adivinar{
+        background-color: #8c8a4a;
+        color: white;
+        border-radius: 10px;
+        border-style: none;
+        height: 30px;
+    }
+    &__adivinar:hover{
+        background-color: #414022;
+        color: white;
+    }
+}
+.printAge{
+    width: 350px;
+    margin-top: 30px;
+    height: 200px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+    &__text{
+        font-size: 60px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+    }
+}

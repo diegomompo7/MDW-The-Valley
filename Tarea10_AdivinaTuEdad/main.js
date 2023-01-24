@@ -1,13 +1,20 @@
+const URL = "https://api.agify.io?name="
 
 function adivinaEdad(){
   let nombre = document.getElementById('name').value
-  console.log(nombre)
-  const URL = "https://api.agify.io?name=" + nombre;
+  const URLTotal = URL + nombre
 
-  fetch(URL)
+  fetch(URLTotal)
     .then(respuesta => respuesta.json())
-    .then(respuesta => document.getElementById("demo").innerHTML = respuesta.age)
-    .catch(error => console.log(error))
+    .then(respuesta => {
+    if(respuesta.age ===null){
+       document.getElementById("age").innerHTML = '-'
+       throw new Error("El nombre introducido no es correcto");
+    }else{
+      document.getElementById("age").innerHTML = respuesta.age
+    }
+  })
+    .catch(error => console.log(error.message))
 
 }
 
