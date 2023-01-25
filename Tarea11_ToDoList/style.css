@@ -46,44 +46,59 @@ body {
 
 .printList {
   width: 400px;
-  margin-top: 30px;
-  height: 500px;
+  margin-top: 40px;
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
   background-color: white;
 }
 .printList__items {
   display: flex;
+  position: absolute;
   flex-direction: column;
-  padding-bottom: 20px;
-  margin-top: 20px;
+  max-width: 200px;
+  padding-bottom: 40px;
+  margin-top: 10px;
   margin-left: 20px;
 }
 .printList__items-text {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   font-size: 18px;
-  width: 0px;
   color: black;
-  width: 300px;
+  width: 370px;
   border-bottom: lightgrey solid 2px;
 }
 .printList__items-edit {
-  margin-top: 0 auto;
-  padding-top: 0px;
+  margin-top: 24px;
   display: flex;
   justify-content: end;
+  border-style: none;
+  position: relative;
+}
+
+.edit {
+  border-style: none;
+  background-color: white;
+}
+
+.delete {
+  border-style: none;
+  background-color: white;
 }
 
 .fa-pen {
   width: 60px;
-  height: 40px;
+  height: 20px;
+  padding-top: 10px;
   background-color: #bde998;
   text-align: center;
+  border-style: none;
 }
 
 .fa-trash {
   width: 60px;
-  height: 40px;
+  height: 20px;
+  padding-top: 10px;
   color: white;
   background-color: #953bfb;
   text-align: center;
+  border-color: none;
 }/*# sourceMappingURL=style.css.map */
