@@ -1,100 +1,75 @@
 let divList = document.getElementsByClassName('printList')[0];
-let listItems = [];
 let contList = 0;
+let taskList = [];
+let newTaskInput;
+let taskListContainer;
+let lastIndexTask = 0
+let editing = false
 
 
 window.onload = function () {
-  mostrarItems()
-
-}
-function getList(valueL) {
-  let divItems = document.createElement("div")
-  divItems.setAttribute("class", "printList__items")
-  divItems.insertAdjacentHTML('beforeend', '<p id="list" class="printList__items-text">' + valueL + '</p>');
-
-  let divEdit = document.createElement("div")
-  divEdit.setAttribute("class", "printList__items-edit")
-  let editButton = document.createElement("button")
-  let editElement = document.createElement("i")
-  editElement.setAttribute("class", "fa-sharp fa-solid fa-pen")
-
-  let deleteButton = document.createElement("button")
-  let deleteElement = document.createElement("i")
-  deleteButton.setAttribute("id", "remove")
-  deleteElement.setAttribute("class", "fa-solid fa-trash");
-  deleteButton.click(function () { deleteProductFromList(localStorage.length) });
-
-
-  divList.appendChild(divItems)
-  divList.appendChild(divEdit)
-  divEdit.appendChild(editButton)
-  editButton.appendChild(editElement)
-  divEdit.appendChild(deleteButton)
-  deleteButton.appendChild(deleteElement)
-
-}
-
-function setList() {
-  let valueList = document.getElementById('list').value;
-  localStorage.setItem('list' + contList, valueList);
-
-  contList++
-  getList(valueList);
-
-}
-
-function deleteProductList(elementPosition) {
-  console.log("hola")
-
-  for (let i = 0; i <= elementPosition; i++) {
-    if (i === elementPosition) {
-      localStorage.removeItem('list' + i)
-    }
+  initDOM();
+  
+  let infoLS = localStorage.getItem('tasks');
+  if(infoLS !== null && infoLS !== ''){
+    taskList = infoLS.split('/')
+    getList();
   }
-  mostrarItems();
-}
-function editProductList(elementPosition) {
-  console.log("edit")
 
-  document.getElementById("list").textContent = elementPosition
-  mostrarItems();
 }
 
+const initDOM = () =>{
+  newTaskInput = document.getElementById('list');
+  taskListContainer = document.getElementsByClassName('printList')[0];
+  let buttonAdd = document.getElementById("anadir");
+  buttonAdd.addEventListener("click", () => setList(newTaskInput.value));
+}
 
+function getList() {
+  taskListContainer.innerHTML = '';
+  taskList.forEach((element, i) => {
+    let taskDOM = `
+      <div class="printList__items">
+        <span "printList__items-text">${element}</span>
+      </div>
+      <div class="printList__items-edit">  
+        <button class="task-edit"><i class="fa-sharp fa-solid fa-pen"></i></button>
+        <button class="task-delete"><i class="fa-solid fa-trash"></i></button>
+      </div>
+    `
+    taskListContainer.innerHTML = taskListContainer.innerHTML + taskDOM
+  });
 
-function mostrarItems() {
-  for (let i = 0; i < localStorage.length; i++) {
-    let key = localStorage.key(i);
-    if (key !== undefined) {
-      let divItems = document.createElement("div")
-      divItems.setAttribute("class", "printList__items")
-      divItems.insertAdjacentHTML('beforeend', '<p id="list" class="printList__items-text">' + localStorage.getItem(key) + '</p>');
+  let editButtons = document.getElementsByClassName(`task-edit`)
+  let deleteButtons = document.getElementsByClassName(`task-delete`)
 
-      let divEdit = document.createElement("div")
-      divEdit.setAttribute("class", "printList__items-edit")
-      let editButton = document.createElement("button")
-      let editElement = document.createElement("i")
-      editButton.setAttribute("class", "edit")
-      editElement.setAttribute("class", "fa-sharp fa-solid fa-pen")
-      editButton.click(function() { deleteProductFromCart(i) })
+  taskList.forEach((element, i) => {
+    deleteButtons[i].addEventListener('click', () => {deleteTask(i)})
+    editButtons[i].addEventListener('click', () => {editTask(i)})
+  })
+}
 
-      let deleteButton = document.createElement("button")
-      let deleteElement = document.createElement("i")
-      deleteButton.setAttribute("class", "delete")
-      deleteElement.setAttribute("class", "fa-solid fa-trash");
-
-
-
-      divList.appendChild(divItems)
-      divList.appendChild(divEdit)
-      divEdit.appendChild(editButton)
-      editButton.appendChild(editElement)
-      divEdit.appendChild(deleteButton)
-      deleteButton.appendChild(deleteElement)
-
-      contList = localStorage.length
-    }
-
+function setList(newTask) {
+  if(editing){
+    taskList.splice(lastIndexTask, 0, newTask)
+    editing = false
+  }else{
+  taskList.push(newTask)
   }
+  newTaskInput.value = ''
+  localStorage.setItem('tasks', taskList.join('/'))
+  getList();
 }
-document.getElementById("anadir").addEventListener("click", () => setList());
+
+const deleteTask = (i) => {
+  taskList.splice(i, 1)
+  localStorage.setItem('tasks', taskList.join('/'))
+  getList()
+}
+
+const editTask = (i) => {
+  editing = true
+  lastIndexTask = i
+  newTaskInput.value = taskList[i]
+  deleteTask(i)
+}
