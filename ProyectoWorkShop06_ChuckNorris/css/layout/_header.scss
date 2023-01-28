@@ -1,0 +1,13 @@
+.header{
+    margin: 0 auto;
+    height: 50px;
+    background-color: $color2;
+    width: 90%;
+    text-align: center;
+    &__text{
+        padding-top: 15px;
+        @include fontSize(20px);
+        font-weight:900;
+        color: $color1;
+    }
+}
