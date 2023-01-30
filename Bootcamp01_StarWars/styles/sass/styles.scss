@@ -1,0 +1,12 @@
+@import 'base/typo';
+@import 'base/reset';
+@import 'utilities/mixins';
+@import 'utilities/variables';
+
+body{
+    background-color: black;
+    h1{
+    font-family: 'Roboto';
+    font-weight: 300;
+    color: white;
+}}
