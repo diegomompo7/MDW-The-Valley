@@ -2,11 +2,11 @@
 @import 'base/reset';
 @import 'utilities/mixins';
 @import 'utilities/variables';
+@import 'layouts/header';
+@import 'layouts/main';
+@import 'layouts/footer';
 
 body{
-    background-color: black;
-    h1{
-    font-family: 'Roboto';
-    font-weight: 300;
-    color: white;
-}}
+    background-color: $primary-color;
+    color: $secondary-color;
+}

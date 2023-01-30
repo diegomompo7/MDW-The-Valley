@@ -16,7 +16,7 @@
   font-weight: 700;
   font-style: normal;
 }
-a {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -24,11 +24,119 @@ a {
   font-weight: 300;
 }
 
+.header {
+  text-align: center;
+  height: 67px;
+  background-color: #4E4E4E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 87px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header {
+    max-width: 1280px;
+    border-radius: 100px;
+    margin: 69px auto 20px auto;
+  }
+}
+.header__title {
+  font-family: "Poller One";
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .header__title {
+    font-size: 24px;
+  }
+}
+.header__subtitle {
+  font-size: 14px;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .header__subtitle {
+    font-size: 20px;
+  }
+}
+.header--home {
+  background-image: url(../../assets/images/cabecera.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: black;
+  height: 100vh;
+}
+@media screen and (min-width: 1440px) {
+  .header--home {
+    height: 581px;
+    max-width: 1320px;
+    border-radius: 500px;
+    margin: 117px auto 0 auto;
+  }
+}
+.header--home .header__title {
+  font-size: 34px;
+}
+@media screen and (min-width: 768px) {
+  .header--home .header__title {
+    font-size: 40px;
+  }
+}
+.header--home .header__subtitle {
+  font-size: 24px;
+}
+@media screen and (min-width: 768px) {
+  .header--home .header__subtitle {
+    font-size: 32px;
+  }
+}
+
+.footer {
+  height: 77px;
+  border-bottom: 12px solid #E4D18C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F3F3F3;
+  color: #B7B7B7;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 100px;
+    border-bottom: 20px solid #E4D18C;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer {
+    height: 100px;
+    border-bottom: 0px;
+    border-radius: 100px;
+    max-width: 1280px;
+    margin: 58px auto 65px auto;
+  }
+}
+.footer__title {
+  font-family: "Poller One";
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .footer__title {
+    font-size: 20px;
+  }
+}
+.footer__copyright {
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    font-size: 16px;
+  }
+}
+
 body {
   background-color: black;
-}
-body h1 {
-  font-family: "Roboto";
-  font-weight: 300;
   color: white;
 }/*# sourceMappingURL=styles.css.map */
