@@ -5,6 +5,11 @@
 @import 'layouts/header';
 @import 'layouts/main';
 @import 'layouts/footer';
+@import 'layouts/section-home';
+@import 'layouts/nav';
+@import 'layouts/section';
+@import 'componets/card';
+
 
 body{
     background-color: $primary-color;

@@ -6,6 +6,7 @@
     align-items: center;
     background-color: $quaternary-color;
     color: $quinary-color;
+    margin-top: 59px;
 
     @include adapTo('not-mobile'){
         height: 100px;

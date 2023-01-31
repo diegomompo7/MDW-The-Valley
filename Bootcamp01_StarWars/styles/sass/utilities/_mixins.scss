@@ -25,4 +25,9 @@
             @content;
         }
     }
+    @if $breakpoint == 'all-desktop'{
+        @media screen and(min-width: 1024px){
+            @content;
+        }
+    }
 }
