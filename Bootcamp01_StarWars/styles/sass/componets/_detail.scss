@@ -1,0 +1,106 @@
+.detail{
+    width: 100%;
+    margin-bottom: px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 16px;
+
+    @include adapTo('not-mobile'){
+        margin-left: 61px;
+    }
+
+    &__img{
+        width: 100%;
+        @include adapTo('not-mobile'){
+            width: 250px;
+        }
+    }
+    &__info-container{
+        margin-top: 10px;
+        width: 100%;
+        @include adapTo('not-mobile'){
+            max-width: 958px;
+            margin: 0 auto;
+            width: calc(100% - 290px);
+        }
+    }
+
+    &__title{
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        width: 100%;
+        padding: 21px;
+        
+        @include adapTo('not-mobile'){
+            font-size: 40px;
+            width: 85%;
+            background-color: $septenary-color;
+            border-top-right-radius: 200px;
+            border-bottom-right-radius: 200px;
+            text-align: left;
+            margin: 63px auto 39px 0px;
+        }
+    }
+    &__info-title{
+        font-size: 14px;
+        font-weight: 700;
+
+        @include adapTo('not-mobile'){
+            font-size: 18px;
+            padding-left: 28px;
+        }
+    }
+    &__info{
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 23px;
+
+        @include adapTo('not-mobile'){
+            font-size: 20px;
+            padding-left: 28px;
+        }
+    }
+    &__options-container{
+        width: 100%;
+    }
+    &__options-title{
+        font-size: 14px;
+        font-weight: 700;
+        padding-bottom: 21px;
+
+        @include adapTo('desktop-l'){
+            text-align: center;
+        }
+        @include adapTo('desktop-xl'){
+            text-align: center;
+        }
+    }
+    &__img-container{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include adapTo('desktop-l'){
+            justify-content: center;
+        }
+        @include adapTo('desktop-xl'){
+            justify-content: center;
+        }
+    }
+    &__options-img{
+        border-radius: 100px;
+        width: 83px;
+        margin: auto 17px 27px auto;
+
+        @include adapTo('not-mobile'){
+            width: 100px;
+            margin: 15px;
+        }
+        
+    }
+}

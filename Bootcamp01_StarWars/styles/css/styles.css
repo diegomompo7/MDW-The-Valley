@@ -331,6 +331,125 @@
   font-weight: 700;
 }
 
+.detail {
+  width: 100%;
+  margin-bottom: px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 16px;
+}
+@media screen and (min-width: 768px) {
+  .detail {
+    margin-left: 61px;
+  }
+}
+.detail__img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .detail__img {
+    width: 250px;
+  }
+}
+.detail__info-container {
+  margin-top: 10px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .detail__info-container {
+    max-width: 958px;
+    margin: 0 auto;
+    width: calc(100% - 290px);
+  }
+}
+.detail__title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  width: 100%;
+  padding: 21px;
+}
+@media screen and (min-width: 768px) {
+  .detail__title {
+    font-size: 40px;
+    width: 85%;
+    background-color: #141414;
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
+    text-align: left;
+    margin: 63px auto 39px 0px;
+  }
+}
+.detail__info-title {
+  font-size: 14px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .detail__info-title {
+    font-size: 18px;
+    padding-left: 28px;
+  }
+}
+.detail__info {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 23px;
+}
+@media screen and (min-width: 768px) {
+  .detail__info {
+    font-size: 20px;
+    padding-left: 28px;
+  }
+}
+.detail__options-container {
+  width: 100%;
+}
+.detail__options-title {
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 21px;
+}
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  .detail__options-title {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .detail__options-title {
+    text-align: center;
+  }
+}
+.detail__img-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  .detail__img-container {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .detail__img-container {
+    justify-content: center;
+  }
+}
+.detail__options-img {
+  border-radius: 100px;
+  width: 83px;
+  margin: auto 17px 27px auto;
+}
+@media screen and (min-width: 768px) {
+  .detail__options-img {
+    width: 100px;
+    margin: 15px;
+  }
+}
+
 body {
   background-color: black;
   color: white;

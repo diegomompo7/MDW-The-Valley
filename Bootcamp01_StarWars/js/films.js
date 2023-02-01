@@ -50,7 +50,7 @@ const addEventsToFilmLinks = (films) => {
     console.log(cardLinks)
     cardLinks.forEach((element, i) => {
         element.addEventListener('click', () => {
-            console.log('Tengo que ir al detalle de:', films[i].urlDetail)
+            printPage('FILMS', films[i].urlDetail)
         })
     })
 }

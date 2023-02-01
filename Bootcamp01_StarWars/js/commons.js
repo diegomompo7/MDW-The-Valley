@@ -56,3 +56,44 @@ const getRomanNumber = (number) => {
       }
       return roman;
 }
+
+const mapOptions = (options, option) => {
+  let optionFormated = [];
+
+  options.forEach((element, i) => {
+    const StringParts = element.split("/");
+    let idOption = StringParts[StringParts.length -2];
+    let auxObject = {
+      urlImg: 'assets/images/' + option + '/' + idOption + '.jpg',
+      urlFetch: element
+    }
+    optionFormated.push(auxObject)
+  });
+
+  return optionFormated;
+}
+const formatOptions = (option, options) => {
+  let htmlStructure = "";
+
+  options.forEach(element => {
+      htmlStructure += `<img class="detail__options-img detail__options-img--${option}" src="${element.urlImg}">`
+
+      });
+
+    htmlStructure = `
+    <p class="detail__options-title">${option.toUpperCase()}</p>
+    <div class="detail__img-container">
+        ${htmlStructure}
+    </div>  
+    `  
+  return htmlStructure;
+}
+
+const addEventListenerToOptions = (option, options) => {
+   let optionLinks = [...document.getElementsByClassName(`detail__options-img--${option}`)];
+   optionLinks.forEach((element, i) => {
+      element.addEventListener('click', () => {
+        printPage(option.toUpperCase(), options[i].urlFetch);
+      })
+   });
+}

@@ -1,13 +1,15 @@
 body {
-  font-family: monospace;
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(135deg, #E2B0FF 10%, #9F44D3 100%);
   margin: 150px 0;
 }
 
-.titleAge {
+.titleList {
   font-size: 50px;
   color: white;
   text-align: center;
+  font-weight: bold;
+  text-shadow: 5px 5px 0px rgb(240, 46, 170);
 }
 
 .container {
@@ -16,46 +18,36 @@ body {
   align-items: center;
 }
 
-.inputName {
+.inputList {
   display: flex;
   justify-content: center;
   max-width: 350px;
   padding: 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
   background-color: white;
-  border-radius: 10px;
 }
-.inputName__text {
+.inputList__text {
   font-size: 18px;
-}
-.inputName__adivinar {
-  background-color: #8c8a4a;
-  color: white;
-  border-radius: 10px;
+  margin-right: 20px;
   border-style: none;
+  border-bottom: 2px solid lightgray;
+}
+.inputList__anadir {
+  background-color: rgb(240, 46, 170);
+  color: white;
+  border-style: none;
+  width: 90px;
   height: 30px;
 }
-.inputName__adivinar:hover {
-  background-color: #414022;
+.inputList__anadir:hover {
+  background-color: rgb(147, 19, 100);
   color: white;
 }
 
-.printAge {
-  width: 350px;
-  margin-top: 30px;
-  height: 200px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px;
-  background-color: white;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-}
-.printAge__text {
-  font-size: 60px;
-  font-weight: bold;
-  color: black;
-  text-align: center;
-}/*# sourceMappingURL=style.css.map */ 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+.printList {
+  width: 400px;
+  margin-top: 40px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
   background-color: white;
 }
 .printList__items {

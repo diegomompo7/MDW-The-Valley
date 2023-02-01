@@ -4,14 +4,18 @@ window.onload = () => {
     printPage('HOME');
 }
 
-const printPage = (section) => {
+const printPage = (section, url) => {
     adaptHeader(section);
+
+    console.log(section)
+    console.log(url)
+
     switch(section){
         case 'HOME':
             printHome();
             break;
         case 'FILMS':
-            printFilms();
+            url ? printDetailFilm(url) :  printFilms();
             break;
         case 'CHARACTERS':
             console.log("Pinta personajes");
