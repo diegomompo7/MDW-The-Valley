@@ -61,7 +61,7 @@ const printFilms = () => {
 
         mainContainer.innerHTML = `
      <section class="section">
-        <h3 class="section__title">FILMS</h3>
+        <h3 class="section__title">FILM</h3>
         <section class="section__container">
            ${filmsCards}
         </section>

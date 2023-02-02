@@ -333,7 +333,6 @@
 
 .detail {
   width: 100%;
-  margin-bottom: px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -447,6 +446,24 @@
   .detail__options-img {
     width: 100px;
     margin: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .detail--starship .detail__img {
+    width: 500px;
+    margin: 0 auto;
+  }
+  .detail--starship .detail__title {
+    border-radius: 200px;
+    text-align: center;
+  }
+  .detail--starship .detail__info-container {
+    padding-left: 0px;
+    width: 100%;
+    max-width: 958px;
+  }
+  .detail--starship .detail__options-container {
+    padding-left: 30px;
   }
 }
 

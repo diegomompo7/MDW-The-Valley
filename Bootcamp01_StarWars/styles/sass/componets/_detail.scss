@@ -1,6 +1,5 @@
 .detail{
     width: 100%;
-    margin-bottom: px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,5 +101,26 @@
             margin: 15px;
         }
         
+    }
+
+    &--starship{
+        @include adapTo('not-mobile'){
+            .detail__img{
+                width: 500px;
+                margin: 0 auto;
+            }
+            .detail__title{
+                border-radius: 200px;
+                text-align: center;
+            }
+            .detail__info-container{
+                padding-left: 0px;
+                width: 100%;
+                max-width: 958px;
+            }
+            .detail__options-container{
+                padding-left: 30px;
+            }
+        }
     }
 }

@@ -18,16 +18,16 @@ const printPage = (section, url) => {
             url ? printDetailFilm(url) :  printFilms();
             break;
         case 'CHARACTERS':
-            console.log("Pinta personajes");
+            url ? printDetailCharacter(url) : printCharacters();
             break;
         case 'STARSHIPS':
-            console.log("Pinta naves");
+            url ? printDetailStarship(url) : printStarships();
             break;
         case 'SPECIES':
-            console.log("Pinta especies");
+            url ? printDetailSpecie(url) : printSpecies();
             break;
         case 'PLANETS':
-            console.log("Pinta planetas");
+            url ? printDetailPlanet(url) : printPlanets();
             break;
         default:
             printHome();

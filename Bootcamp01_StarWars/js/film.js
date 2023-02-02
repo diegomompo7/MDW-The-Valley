@@ -46,21 +46,23 @@ const formatFilmDetail = (film) => {
     let species = formatOptions('species', film.species);
 
     return `
-    <img class="detail__img" src="${film.img}">
-    <div class="detail__info-container">
-        <h4 class="detail__title"> ${film.title}</h4>
-        <p class="detail__info-title"> EPISODE </p>
-        <p class="detail__info"> ${film.episode} </p>
-        <p class="detail__info-title"> DIRECTOR </p>
-        <p class="detail__info"> ${film.director} </p>
-        <p class="detail__info-title"> DATE </p>
-        <p class="detail__info"> ${film.date} </p>
-    </div>
-    <div class="detail__options-container">
-     ${characters}
-     ${planets}
-     ${starships}
-     ${species}
+    <div class="detail">
+        <img class="detail__img" src="${film.img}">
+        <div class="detail__info-container">
+            <h4 class="detail__title"> ${film.title}</h4>
+            <p class="detail__info-title"> EPISODE </p>
+            <p class="detail__info"> ${film.episode} </p>
+            <p class="detail__info-title"> DIRECTOR </p>
+            <p class="detail__info"> ${film.director} </p>
+            <p class="detail__info-title"> DATE </p>
+            <p class="detail__info"> ${film.date} </p>
+        </div>
+        <div class="detail__options-container">
+        ${characters}
+        ${planets}
+        ${starships}
+        ${species}
+        </div>
     </div>
     `
 }
