@@ -1,0 +1,16 @@
+.section {
+    &__text{
+        width: 100%;
+        background-color: $ninth-color;
+        height: 35px;
+        margin-bottom: 27px;
+
+        &-title{
+            font-size: 14px;
+            font-weight: 700;
+            padding:  7px;
+            color: $eighth-color;
+            text-align: center;
+        }
+    }
+}

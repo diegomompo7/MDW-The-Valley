@@ -1,4 +1,5 @@
 const mainContainer = document.querySelector(".main");
+const URL_BASE = "https://rickandmortyapi.com/api"
 
 window.onload = () => {
     printPage('HOME');
@@ -7,10 +8,15 @@ window.onload = () => {
 const printPage = (section, url) => {
     adaptHeader(section);
 
+    console.log(section)
+    console.log(url)
+
     switch(section){
         case 'HOME':
             printHome();
         break;
+        case 'PERSONAJES':
+            url ? printDetailCharacter(url) : printCharacters();
     }
 
 }

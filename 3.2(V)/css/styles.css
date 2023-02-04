@@ -1,6 +1,10 @@
-h1 {
-  color: red;
-}/*# sourceMappingURL=styles.css.map */0px;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  font-size: 20px;
 }
 .header--big {
   font-size: 50px;
