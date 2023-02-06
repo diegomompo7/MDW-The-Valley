@@ -17,6 +17,7 @@ const printPage = (section, url) => {
         break;
         case 'PERSONAJES':
             url ? printDetailCharacter(url) : printCharacters();
+        break;
     }
 
 }
