@@ -1,4 +1,4 @@
-let urlNext = '';
+let urlNextCharacter = '';
 
 const printCharacters = () => {
     mainContainer.innerHTML="";
@@ -19,20 +19,20 @@ const printCharacters = () => {
                 </div>
             </section>
         `;
-        addEventListenerToMore();
+        addEventListenerToMoreCharacters();
         addEventsToCharacterLinks(response);
     })
 }
 
 const getCharacters = async() => {
-    if(urlNext === null || urlNext === '') {
+    if(urlNextCharacter === null || urlNextCharacter === '') {
         let url = URL_BASE + "/character";
-        urlNext = url
+        urlNextCharacter = url
     }
-    let response = await fetch(urlNext);
+    let response = await fetch(urlNextCharacter);
     let data = await response.json();
-    urlNext = data.info.next;
-    console.log(urlNext)
+    urlNextCharacter = data.info.next;
+    console.log(urlNextCharacter)
     data = mapDataCharacters(data.results);
     return data;
 
@@ -87,7 +87,7 @@ const formatCharactersCards = (characters) =>{
 
     return templatesCharacters;
 }
-const addEventListenerToMore = () => {
+const addEventListenerToMoreCharacters = () => {
     let moreCards = document.getElementsByClassName('section__more')[0];
     moreCards.addEventListener('click', () => {
         printMoreCharacters();

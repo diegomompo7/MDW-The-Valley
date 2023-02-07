@@ -17,7 +17,7 @@ const mapEpisode = (options, option) => {
     let htmlStructure = "";
   
     options.forEach(element => {
-        htmlStructure += `<a class="detail__options detail__options-${option}">${element.number}</a>`
+        htmlStructure += `<button class="detail__options detail__options-${option}">${element.number}</button>`
   
         });
   

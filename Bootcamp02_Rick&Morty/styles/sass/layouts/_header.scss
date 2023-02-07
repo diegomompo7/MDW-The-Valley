@@ -37,10 +37,11 @@
         background-image: url(../../assets/images/rick_morty-fondo.png);
         background-repeat: no-repeat;
         background-position: bottom;
-        height: 100vh;
+        height: 75vh;
         width: 100%;
-        @include adapTo('desktop-xl'){
+        @include adapTo('min-desktop-l'){
             max-width: 1328px;
+            background-color: $first-color;
         }
 
         .header__title{

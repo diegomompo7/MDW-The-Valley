@@ -59,7 +59,7 @@ const formatCharacterDetail = (character) => {
                     <p class="detail__info-description"> ${character.originName} </p>
                     <p class="detail__info-title">LOCATION</p>
                     <div class="detail__info-location">
-                        <a class="detail__options detail__options-location">${character.locationName}</a>
+                        <button class="detail__options detail__options-location">${character.locationName}</button>
                     </div>
                 </div>
                 ${episode}

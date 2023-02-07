@@ -3,8 +3,40 @@
     flex-wrap: wrap;
     width: 100%;
 
+    @include adapTo('only-desktop'){
+        max-width: 1024px;
+    }
+
+    @include adapTo('min-desktop-l'){
+        margin: 61px auto  62px auto;
+        -webkit-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.25);
+        box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.25);
+    }
+    @include adapTo('desktop-xl'){
+        border: 1px solid $twelveth-color;
+        margin-left: 208px;
+    }
+
+
+
     &__container{
         margin: auto;
+
+        
+        @include adapTo('not-mobile'){
+            display: flex;
+            justify-content: flex-start;
+            padding-top: 44px;
+            flex-direction: column;
+            margin: 0;
+            width: 39%;
+            background-color: #F2F2F2;
+        }
+        @include adapTo('only-desktop'){
+            justify-content: flex-start;
+            width: 25%;
+        }
 
         &-img{
             margin: 0 auto;
@@ -18,16 +50,34 @@
             text-align: center;
             color: $eighth-color;
             font-weight: 700;
+            
         }
     }
     &__info{
+
+        @include adapTo('not-mobile'){
+
+            padding-top: 44px;
+            width: 70%;
+        }
+
+        @include adapTo('only-desktop'){
+
+            width: 75%;
+        }
         &-container{
+            @include adapTo('only-desktop'){
+                display: flex;
+                flex-wrap: wrap;
+                width: 41%;
+            }
             
         }
         &-title{
             font-size: 14px;
             margin-left: 27px;
             color: $eleventh-color;
+            font-weight: 700;
             padding-bottom: 6px;
         }
         &-status{
@@ -69,17 +119,35 @@
             padding-left: 10px;
             height: 30px;
             background-color: $fifteenth-color;
+
+            @include adapTo('tablet'){
+
+                width: 398px;
+            }
+
+            @include adapTo('only-desktop'){
+
+                width: 190px;
+            }
         }
         &-location{
             margin-bottom: 21px;
+            margin-left: 27px;
 
-            a{
-                margin-left: 27px;
+            button{
+                width: 278px;
+                text-align: left;
                 padding-left: 10px;
-                margin-bottom: 21px;
-                padding-left: 10px;
-                height: 30px;
-                width: 282px;
+                border-style: none;
+
+                @include adapTo('tablet'){
+
+                    width: 398px;
+                }
+                @include adapTo('only-desktop'){
+
+                    width: 190px;
+                }
             }
         }
     }
@@ -88,6 +156,7 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        margin-bottom: 53px;
     }
     &__options{
         font-size: 18px;
@@ -99,7 +168,11 @@
 
         &-episode{
             margin-left: 27px;
-            width: 51px;
+            margin-bottom: 9px;
+            margin-right: 11px;
+            width: 38px;
+            border-style: none;
+
         }
     }
 

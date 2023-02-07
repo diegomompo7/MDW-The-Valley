@@ -65,12 +65,13 @@
   background-image: url(../../assets/images/rick_morty-fondo.png);
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 100vh;
+  height: 75vh;
   width: 100%;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .header--home {
     max-width: 1328px;
+    background-color: #FFFFFF;
   }
 }
 .header--home .header__title {
@@ -120,7 +121,7 @@
 }
 @media screen and (min-width: 1440px) {
   .footer {
-    max-width: 1328px;
+    max-width: 1280px;
     border-radius: 20px;
   }
 }
@@ -132,7 +133,7 @@
     position: absolute;
     align-items: center;
     width: 20%;
-    margin: 0px auto 27px 20px;
+    margin: 0px auto 27px 45px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -188,7 +189,7 @@
 @media screen and (min-width: 1440px) {
   .footer__nav {
     width: 90%;
-    padding-right: 60px;
+    padding-right: 130px;
   }
 }
 .footer__nav-link {
@@ -303,17 +304,17 @@
   width: 100%;
   background-color: #BEA1C7;
   height: 35px;
-  margin-bottom: 27px;
 }
 @media screen and (min-width: 768px) {
   .section__text {
     height: 45px;
-    margin-bottom: 32px;
   }
 }
 @media screen and (min-width: 1440px) {
   .section__text {
     max-width: 1280px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 }
 .section__text-title {
@@ -328,6 +329,11 @@
     font-size: 18px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .section-container {
+    max-width: 1280px;
+  }
+}
 
 .section-container {
   display: flex;
@@ -340,7 +346,9 @@
   margin: 10px;
   border-radius: 20px;
   margin-bottom: 18px;
-  border: 1px solid #4D1F5B;
+  -webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .card {
@@ -380,6 +388,36 @@
   .card__text-name {
     font-size: 18px;
   }
+}
+.card__text--location {
+  border-radius: 20px;
+  background-color: #F3F3F3;
+  width: 277px;
+  height: auto;
+  margin-top: 21px;
+  margin-left: 22px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .card__text--location {
+    width: 323px;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  .card__text--location {
+    width: 295px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card__text--location {
+    width: 369px;
+  }
+}
+.card__text--location-name {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #4D1F5B;
 }
 .card__status {
   width: 69px;
@@ -426,6 +464,21 @@
   padding-left: 9px;
   width: 50%;
 }
+.card__info-container--locations {
+  display: flex;
+  margin-top: 25px;
+  margin-left: 54px;
+}
+@media screen and (min-width: 768px) {
+  .card__info-container--locations {
+    margin-left: 63px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card__info-container--locations {
+    margin-left: 100px;
+  }
+}
 .card__info-title {
   font-size: 10px;
   font-weight: 700;
@@ -436,14 +489,29 @@
     font-size: 12px;
   }
 }
-.card__info {
+.card__info-title--locations {
+  text-align: center;
+}
+.card__info--type {
+  border-right: 1px solid black;
+  width: auto;
+  padding-right: 40px;
+  margin-right: 40px;
+}
+.card__info--type__info--dimension {
+  width: auto;
+}
+.card__info--type__info {
   font-size: 14px;
   font-family: 700;
   color: #000000;
   margin-bottom: 4px;
 }
+.card__info--type__info--locations {
+  text-align: center;
+}
 @media screen and (min-width: 768px) {
-  .card__info {
+  .card__info--type {
     font-size: 16px;
   }
 }
@@ -514,8 +582,44 @@
   flex-wrap: wrap;
   width: 100%;
 }
+@media screen and (min-width: 1024px) {
+  .detail {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .detail {
+    margin: 61px auto 62px auto;
+    -webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .detail {
+    border: 1px solid #000000;
+    margin-left: 208px;
+  }
+}
 .detail__container {
   margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .detail__container {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 44px;
+    flex-direction: column;
+    margin: 0;
+    width: 39%;
+    background-color: #F2F2F2;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .detail__container {
+    justify-content: flex-start;
+    width: 25%;
+  }
 }
 .detail__container-img {
   margin: 0 auto;
@@ -530,10 +634,29 @@
   color: #4D1F5B;
   font-weight: 700;
 }
+@media screen and (min-width: 768px) {
+  .detail__info {
+    padding-top: 44px;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .detail__info {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .detail__info-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 41%;
+  }
+}
 .detail__info-title {
   font-size: 14px;
   margin-left: 27px;
   color: #A6A6A6;
+  font-weight: 700;
   padding-bottom: 6px;
 }
 .detail__info-status {
@@ -573,21 +696,41 @@
   height: 30px;
   background-color: #F2F2F2;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .detail__info-description {
+    width: 398px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .detail__info-description {
+    width: 190px;
+  }
+}
 .detail__info-location {
   margin-bottom: 21px;
-}
-.detail__info-location a {
   margin-left: 27px;
+}
+.detail__info-location button {
+  width: 278px;
+  text-align: left;
   padding-left: 10px;
-  margin-bottom: 21px;
-  padding-left: 10px;
-  height: 30px;
-  width: 282px;
+  border-style: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .detail__info-location button {
+    width: 398px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .detail__info-location button {
+    width: 190px;
+  }
 }
 .detail__episode {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  margin-bottom: 53px;
 }
 .detail__options {
   font-size: 18px;
@@ -599,5 +742,8 @@
 }
 .detail__options-episode {
   margin-left: 27px;
-  width: 51px;
+  margin-bottom: 9px;
+  margin-right: 11px;
+  width: 38px;
+  border-style: none;
 }/*# sourceMappingURL=styles.css.map */
