@@ -9,7 +9,7 @@ const printLocations = () => {
         mainContainer.innerHTML = `
             <section class="section">
                 <div class="section__text">
-                    <h3 class="section__text-title">LOCATIONS FINDER</h3>
+                    <h3 class="section__text-title">LOCATION FINDER</h3>
                 </div>
                 <section class="section-container">
                     ${locationsCards}

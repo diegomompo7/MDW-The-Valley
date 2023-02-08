@@ -21,6 +21,9 @@ const printPage = (section, url) => {
         case 'LOCALIZACIONES':
             url ? printDetailLocation(url) : printLocations();
         break;
+        default:
+            printHome();
+        break;
     }
 
 }

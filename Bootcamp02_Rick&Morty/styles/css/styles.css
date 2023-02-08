@@ -634,6 +634,22 @@
   color: #4D1F5B;
   font-weight: 700;
 }
+.detail__container-title--location {
+  font-size: 20px;
+  color: #4D1F5B;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 13px;
+}
+.detail__container--location {
+  background-color: #F3F3F3;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 288px;
+  height: 52px;
+  margin-bottom: 29px;
+}
 @media screen and (min-width: 768px) {
   .detail__info {
     padding-top: 44px;
@@ -732,6 +748,12 @@
   width: 100%;
   margin-bottom: 53px;
 }
+.detail__residents {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  margin-bottom: 53px;
+}
 .detail__options {
   font-size: 18px;
   color: #000000;
@@ -742,6 +764,13 @@
 }
 .detail__options-episode {
   margin-left: 27px;
+  margin-bottom: 9px;
+  margin-right: 11px;
+  width: 38px;
+  border-style: none;
+}
+.detail__options-residents {
+  width: 90px;
   margin-bottom: 9px;
   margin-right: 11px;
   width: 38px;

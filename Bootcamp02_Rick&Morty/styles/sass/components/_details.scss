@@ -50,7 +50,24 @@
             text-align: center;
             color: $eighth-color;
             font-weight: 700;
+
+            &--location{
+                font-size: 20px;
+                color: $eighth-color;
+                font-weight: 700;
+                text-align: center;
+                padding-top: 13px;
+            }
             
+        }
+        &--location{
+            background-color: $fourth-color;
+            border-radius: 20px;
+            margin: 0 auto;
+            margin-top: 30px;
+            width: 288px;
+            height: 52px;
+            margin-bottom: 29px;
         }
     }
     &__info{
@@ -158,6 +175,12 @@
         width: 100%;
         margin-bottom: 53px;
     }
+    &__residents{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        margin-bottom: 53px;
+    }
     &__options{
         font-size: 18px;
         color: $twelveth-color;
@@ -168,6 +191,14 @@
 
         &-episode{
             margin-left: 27px;
+            margin-bottom: 9px;
+            margin-right: 11px;
+            width: 38px;
+            border-style: none;
+
+        }
+        &-residents{
+            width: 90px;
             margin-bottom: 9px;
             margin-right: 11px;
             width: 38px;

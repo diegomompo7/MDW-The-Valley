@@ -7,7 +7,7 @@ const printDetailCharacter = (url) => {
         mainContainer.innerHTML = `
             <section class="section">
                 <div class="section__text">
-                    <h3 class="section__text-title">CHARACTERS DETAIL</h3>
+                    <h3 class="section__text-title">CHARACTER DETAIL</h3>
                 </div>
                 <section class="section-container">
                     ${characterDetail}
@@ -22,6 +22,7 @@ const getCharacter = async(url) => {
     let response = await fetch(url);
     let data = await response.json();
     data = formatDataCharacter(data)
+    console.log(data)
     return data
 }
 

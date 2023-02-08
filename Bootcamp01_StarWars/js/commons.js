@@ -75,6 +75,8 @@ const mapOptions = (options, option) => {
 const formatOptions = (option, options) => {
   let htmlStructure = "";
 
+  console.log(options)
+
   options.forEach(element => {
       htmlStructure += `<img class="detail__options-img detail__options-img--${option}" src="${element.urlImg}">`
 
