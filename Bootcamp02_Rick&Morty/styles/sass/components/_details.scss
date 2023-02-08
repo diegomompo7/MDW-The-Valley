@@ -178,7 +178,7 @@
     &__residents{
         display: flex;
         flex-wrap: wrap;
-        width: 50%;
+        width: 80%;
         margin-bottom: 53px;
     }
     &__options{
@@ -186,7 +186,7 @@
         color: $twelveth-color;
         background-color: $second-color;
         height: 30px;
-        border-radius: 20px;
+        border-radius: 100px;
         text-decoration: none;
 
         &-episode{
@@ -198,10 +198,10 @@
 
         }
         &-residents{
-            width: 90px;
+            margin-left: 27px;
             margin-bottom: 9px;
-            margin-right: 11px;
-            width: 38px;
+            width: 22%;
+            height: auto;
             border-style: none;
 
         }
