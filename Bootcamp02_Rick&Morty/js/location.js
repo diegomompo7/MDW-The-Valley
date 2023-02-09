@@ -37,11 +37,11 @@ const formatLocationDetail = (location) => {
     let character = formatOptions(location, 'residents')
 
     return `
-        <div class="detail">
+        <div class="detail detail--location">
             <div class="detail__container--location">
                 <h4 class="detail__container-title--location"> ${location.name}</h4>
             </div>
-            <div class="detail__info">
+            <div class="detail__info--location">
                 <div class="detail__info-container">
                     <p class="detail__info-title"> TYPE </p>
                     <p class="detail__info-description"> ${location.type} </p>

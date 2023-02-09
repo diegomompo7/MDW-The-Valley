@@ -17,6 +17,12 @@
         border: 1px solid $twelveth-color;
         margin-left: 208px;
     }
+    &--location{
+        @include adapTo('desktop-xl'){
+            border: 0px;
+            margin-left: 208px;
+        }
+    }
 
 
 
@@ -30,7 +36,7 @@
             padding-top: 44px;
             flex-direction: column;
             margin: 0;
-            width: 39%;
+            width: 30%;
             background-color: #F2F2F2;
         }
         @include adapTo('only-desktop'){
@@ -57,6 +63,14 @@
                 font-weight: 700;
                 text-align: center;
                 padding-top: 13px;
+
+                @include adapTo('not-mobile'){
+                    font-size: 40px;
+                }
+                @include adapTo('desktop-xl'){
+                    padding-right: 60px;
+                    border-right: 3px solid $ninth-color;
+                }
             }
             
         }
@@ -68,6 +82,21 @@
             width: 288px;
             height: 52px;
             margin-bottom: 29px;
+
+            @include adapTo('not-mobile'){
+                display: flex;
+                flex-wrap: wrap;
+                height: auto;
+                margin: 0;
+                align-items: center;
+                width: 38%;
+                border-radius: 0;
+                justify-content: center;
+                background-color: #F2F2F2;
+            }
+            @include adapTo('desktop-xl'){
+                background-color: $first-color;
+            }
         }
     }
     &__info{
@@ -81,6 +110,13 @@
         @include adapTo('only-desktop'){
 
             width: 75%;
+        }
+        &--location{
+            @include adapTo('not-mobile'){
+
+                padding-top: 44px;
+                width: 61%;
+            }
         }
         &-container{
             @include adapTo('only-desktop'){
@@ -178,8 +214,9 @@
     &__residents{
         display: flex;
         flex-wrap: wrap;
-        width: 80%;
+        width: 100%;
         margin-bottom: 53px;
+
     }
     &__options{
         font-size: 18px;
@@ -200,8 +237,8 @@
         &-residents{
             margin-left: 27px;
             margin-bottom: 9px;
-            width: 22%;
-            height: auto;
+            width: 70px;
+            height: 70px;
             border-style: none;
 
         }

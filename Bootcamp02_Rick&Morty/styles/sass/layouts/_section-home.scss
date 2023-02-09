@@ -1,6 +1,5 @@
 .section-home{
     &__description{
-        margin: 0 auto;
         text-align: center;
         margin: 53px 20px 0px 20px;
         font-size: 16px;
@@ -12,6 +11,7 @@
             margin-top: 54px;
             font-size: 20px;
             padding-bottom: 27px;
+            text-align: center;
         }
     }
 }

@@ -215,7 +215,6 @@
 }
 
 .section-home__description {
-  margin: 0 auto;
   text-align: center;
   margin: 53px 20px 0px 20px;
   font-size: 16px;
@@ -229,6 +228,7 @@
     margin-top: 54px;
     font-size: 20px;
     padding-bottom: 27px;
+    text-align: center;
   }
 }
 
@@ -601,6 +601,12 @@
     margin-left: 208px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .detail--location {
+    border: 0px;
+    margin-left: 208px;
+  }
+}
 .detail__container {
   margin: auto;
 }
@@ -611,7 +617,7 @@
     padding-top: 44px;
     flex-direction: column;
     margin: 0;
-    width: 39%;
+    width: 30%;
     background-color: #F2F2F2;
   }
 }
@@ -641,6 +647,17 @@
   text-align: center;
   padding-top: 13px;
 }
+@media screen and (min-width: 768px) {
+  .detail__container-title--location {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .detail__container-title--location {
+    padding-right: 60px;
+    border-right: 3px solid #BEA1C7;
+  }
+}
 .detail__container--location {
   background-color: #F3F3F3;
   border-radius: 20px;
@@ -651,6 +668,24 @@
   margin-bottom: 29px;
 }
 @media screen and (min-width: 768px) {
+  .detail__container--location {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    margin: 0;
+    align-items: center;
+    width: 38%;
+    border-radius: 0;
+    justify-content: center;
+    background-color: #F2F2F2;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .detail__container--location {
+    background-color: #FFFFFF;
+  }
+}
+@media screen and (min-width: 768px) {
   .detail__info {
     padding-top: 44px;
     width: 70%;
@@ -659,6 +694,12 @@
 @media screen and (min-width: 1024px) {
   .detail__info {
     width: 75%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .detail__info--location {
+    padding-top: 44px;
+    width: 61%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -751,7 +792,7 @@
 .detail__residents {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   margin-bottom: 53px;
 }
 .detail__options {
@@ -772,7 +813,7 @@
 .detail__options-residents {
   margin-left: 27px;
   margin-bottom: 9px;
-  width: 22%;
-  height: auto;
+  width: 70px;
+  height: 70px;
   border-style: none;
 }/*# sourceMappingURL=styles.css.map */
