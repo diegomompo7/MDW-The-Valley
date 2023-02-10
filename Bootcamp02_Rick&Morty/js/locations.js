@@ -54,18 +54,18 @@ const formatLocationsCards = (locations) =>{
     let templatesLocations = locations.map(location => {
         return `
             <div class="card">
-                <div class="card__text--location">
-                    <h2 class="card__text--location-name"> ${location.name}</h2>
+                <div class="card__text--detail2">
+                    <h2 class="card__text--detail2-name"> ${location.name}</h2>
                 </div>
                 <div class="card__container">
-                    <div class="card__info-container card__info-container--locations">
+                    <div class="card__info-container card__info-container--details2">
                         <div class="card__info--type">
-                            <p class="card__info-title card__info-title--locations">TYPE</p>
-                            <p class="card__info card__info--locations">${location.type}</p>
+                            <p class="card__info-title card__info-title--details2">TYPE</p>
+                            <p class="card__info card__info--details2">${location.type}</p>
                         </div>
                         <div class="card__info--dimension">
                             <p class="card__info-title card__info-title--locations">DIMENSION</p>
-                            <p class="card__info card__info--locations">${location.dimension}</p>
+                            <p class="card__info card__info--detail2">${location.dimension}</p>
                         </div>
                     </div>
                 </div>

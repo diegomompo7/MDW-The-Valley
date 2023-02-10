@@ -57,7 +57,7 @@
             color: $eighth-color;
             font-weight: 700;
 
-            &--location{
+            &--detail2{
                 font-size: 20px;
                 color: $eighth-color;
                 font-weight: 700;
@@ -74,7 +74,7 @@
             }
             
         }
-        &--location{
+        &--detail2{
             background-color: $fourth-color;
             border-radius: 20px;
             margin: 0 auto;
@@ -111,7 +111,7 @@
 
             width: 75%;
         }
-        &--location{
+        &--detail2{
             @include adapTo('not-mobile'){
 
                 padding-top: 44px;
@@ -183,7 +183,7 @@
                 width: 190px;
             }
         }
-        &-location{
+        &-detail2{
             margin-bottom: 21px;
             margin-left: 27px;
 

@@ -38,10 +38,10 @@ const formatLocationDetail = (location) => {
 
     return `
         <div class="detail detail--location">
-            <div class="detail__container--location">
-                <h4 class="detail__container-title--location"> ${location.name}</h4>
+            <div class="detail__container--detail2">
+                <h4 class="detail__container-title--detail2"> ${location.name}</h4>
             </div>
-            <div class="detail__info--location">
+            <div class="detail__info--detail2">
                 <div class="detail__info-container">
                     <p class="detail__info-title"> TYPE </p>
                     <p class="detail__info-description"> ${location.type} </p>

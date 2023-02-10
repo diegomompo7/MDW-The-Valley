@@ -48,7 +48,7 @@
             }
         
         }
-        &--location{
+        &--detail2{
             border-radius: 20px;
             background-color: $fourth-color;
             width: 277px;
@@ -124,7 +124,7 @@
         padding-left: 9px;
         width: 50%;
 
-        &--locations{
+        &--details2{
             display: flex;
             margin-top: 25px;
             margin-left: 54px;
@@ -145,7 +145,7 @@
         @include adapTo('not-mobile'){
             font-size: 12px;
         }
-        &--locations{
+        &--details2{
             text-align: center;
         }
     }
@@ -163,7 +163,7 @@
         font-family: 700;
         color: $twelveth-color;
         margin-bottom: 4px;
-        &--locations{
+        &--details2{
             text-align: center;
         }
     }

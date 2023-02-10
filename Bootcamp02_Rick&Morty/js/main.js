@@ -21,6 +21,9 @@ const printPage = (section, url) => {
         case 'LOCALIZACIONES':
             url ? printDetailLocation(url) : printLocations();
         break;
+        case 'TEMPORADAS':
+            url ? printDetailEpisode(url) : printEpisodes();
+        break;
         default:
             printHome();
         break;
