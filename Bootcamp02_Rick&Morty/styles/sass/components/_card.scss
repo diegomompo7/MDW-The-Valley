@@ -154,15 +154,15 @@
         width: auto;
         padding-right: 40px;
         margin-right: 40px;
-
+    }
     &__info--dimension{
         width: auto;
     }
     &__info{
         font-size: 14px;
-        font-family: 700;
         color: $twelveth-color;
         margin-bottom: 4px;
+        
         &--details2{
             text-align: center;
         }
@@ -194,4 +194,3 @@
             }
         }
     }
-}

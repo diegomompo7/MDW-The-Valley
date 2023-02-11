@@ -2,11 +2,13 @@ let urlNextEpisodes = '';
 let nameEpisode = []
 let dateEpisode = []
 let season = []
+let seasonConcat = []
+let dataConcat = []
 let idEpisode;
-let idSeason = 1;
-let cont = 1;
 let seasonObject = new Object()
 let seasonArray = []
+let dataPages = []
+
 
 const printEpisodes = () => {
     mainContainer.innerHTML="";
@@ -27,40 +29,50 @@ const printEpisodes = () => {
                 </div>
             </section>
         `;
-        addEventListenerToMoreEpisodes();
-        addEventsToEpisodeLinks(response);
+        addEventsToEpisodeLinks(dataConcat);
     })
 }
 
 const getEpisodes = async() => {
-    if(urlNextEpisodes === null || urlNextEpisodes === '') {
-        let url = URL_BASE + "/episode";
-        urlNextEpisodes = url
-    }
-    let response = await fetch(urlNextEpisodes);
-    let data = await response.json();
-    urlNextEpisodes = data.info.next;
-    console.log(urlNextEpisodes)
+    let url = URL_BASE + "/episode/";
+    let urlNext =  null;
+    let dataAll  = [];
 
-    console.log(season)
+    do{
+        let response = (urlNext !== null) ? await fetch(urlNext) : await fetch(url)
+        data = await response.json();
+        dataPages.push(data)
+        console.log(dataPages)
 
-    data = mapDataEpisodes(data.results);
-    return data;
+        urlNext = data.info.next
 
-} 
-const mapDataEpisodes = async(data) => {
+    }while (data.info.next != null)
+
+    dataAll = [...dataAll, ...mapDataEpisodes(dataPages)]
+    return dataAll;
+}
+
+const mapDataEpisodes = (data) => {
         let dataMapped = []
         let dataSeason = []
-        dataSeason = data.map(idSeason => idSeason.episode.slice(0,3))
-        season.push(dataSeason)
 
-        console.log(season)
+        for(let i=0; i<data.length; i++){
+            console.log(data[i].results)
+            dataSeason = data[i].results.map(idSeason => idSeason.episode.slice(0,3))
+            season.push(dataSeason)
+        }
+        
+        console.log(data)
+        seasonConcat = season[0].concat(season[1], season[2])
+        dataConcat = data[0].results.concat(data[1].results, data[2].results)
 
-        for(let i=1; i<=dataSeason.length;i++){
-            if(dataSeason[i] != dataSeason[i-1] || dataSeason[i] > dataSeason.length){
+        console.log(seasonConcat)
+        console.log(dataConcat)
+        
+        for(let i=1; i<=seasonConcat.length;i++){
+            if(seasonConcat[i] != seasonConcat[i-1]){
 
-                console.log(dataSeason[i-1])
-                dataIdEpisode = data.filter(id => id.episode.includes(dataSeason[i-1]))
+                dataIdEpisode = dataConcat.filter(id => id.episode.includes(seasonConcat[i-1]))
                 console.log(dataIdEpisode)
                 dataMapped = dataIdEpisode.map(episode => {
                 let object =  {
@@ -95,51 +107,48 @@ const mapDataEpisodes = async(data) => {
                 seasonObject = new Object()
         }
 
+
     }
     return dataMapped;
 }
 const formatEpisodesCards = (episodes) =>{
     console.log(episodes)
-    let nameEp = printNameEpisodes();
+    console.log(seasonArray[0].idEpisode)
 
-    let templatesEpisodes =  `
+    let templatesEpisodes = seasonArray.map((episode) => {
+        console.log(episode)
+        return `
             <div class="card">
                 <div class="card__text--detail2">
-                    <h2 class="card__text--detail2-name"> SEASON ${idEpisode}</h2>
+                    <h2 class="card__text--detail2-name"> SEASON ${episode.idEpisode}</h2>
                 </div>
                 <div class="card__container">
                     <div class="card__info-container card__info-container--details2">
                         <div class="card__info">
                             <p class="card__info-title card__info-title--details2">DATE</p>
-                            <p class="card__info card__info--details2">${dateEpisode[0]} - ${dateEpisode[1]}</p>
-                            <p class="card__info-title card__info-title--episodes">EPISODES</p>
-                            ${nameEp}
+                            <p class="card__info card__info--details2">${episode.dateEpisode[0]} - ${episode.dateEpisode[1]}</p>
+                            <p class="card__info-title card__info-title--details2">EPISODES</p>
                         </div>
                     </div>
                 </div>
+                ${printNameEpisodes(episode.nameEpisode)}
             </div>
-        `  
+        ` 
+    }).join("")
+    return templatesEpisodes
 
-    return templatesEpisodes;
 }
-const printNameEpisodes = () =>{
-    let printName = [...document.getElementsByClassName('card__info')]
+const printNameEpisodes = (episode) =>{
 
-    nameEpisode.forEach(element => {
-        printName.innerHTML += `
+    console.log(episode)
+
+    let nameEpisode = episode.map((episode, i) => {
+        return  `
         <div class="card__more">
-            <a class="card__more-link" href="#">${element}</a>
+            <a class="card__more-link" href="#">${episode}</a>
         </div>`
-    })
-    return printName.innerHTML;
-}
-const addEventListenerToMoreEpisodes = () => {
-    let moreCards = document.getElementsByClassName('section__more')[0];
-    moreCards.addEventListener('click', () => {
-        printMoreEpisodes();
-    })
-
-
+    }).join("")
+    return nameEpisode;
 }
 
 const printMoreEpisodes = () => {
@@ -158,7 +167,7 @@ const addEventsToEpisodeLinks = (episodes) => {
     console.log(cardLinks)
     cardLinks.forEach((element, i) => {
         element.addEventListener('click', () => {
-            printPage('LOCALIZACIONES', episodes[i].urlDetails)
+            printPage('TEMPORADAS', episodes[i].url)
         })
     })
 }

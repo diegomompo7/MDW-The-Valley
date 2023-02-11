@@ -27,7 +27,7 @@ const formatCharactersCards = (characters) => {
                     <p class="card__info">${character.height}</p>
                     <p class="card__info-title">MASS</p>
                     <p class="card__info">${character.mass}</p>
-                    <a class="card__link" href="#">+ MORE DETAILS</a>
+                
                 </div>
             </div>
         `
