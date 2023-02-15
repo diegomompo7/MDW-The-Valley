@@ -1,0 +1,12 @@
+.title{
+    color: red;
+}
+.button{
+    background-color: #f67676;
+    border-radius: 5px;
+    border-style: none;
+    margin-right: 15px;
+    font-size: 15px;
+    padding: 5px;
+    width: 50px;
+}
