@@ -14,7 +14,7 @@ const showMessage = () => {
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <PhoneComponent></PhoneComponent>
       <h1 class="title">Mensajes:</h1>
       <MessageComponent name="Laura"></MessageComponent>

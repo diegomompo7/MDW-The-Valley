@@ -1,0 +1,10 @@
+.link__nav{
+    color: #c3167c;
+    font-weight: 700;
+    margin: 0 20px 0 20px;
+}
+.link{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
