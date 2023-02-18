@@ -1,18 +1,7 @@
-.header {
-    @include flexible(flex, space-between, center, empty(), empty());
-    padding-top: 30px;
-    @include margin(0, 10px);
+@import '../../scss/utilities/mixins';
+@import '../../scss/utilities/functions';
+@import '../../scss/utilities/variables';
 
-    &__button {
-        background-color: $first-color;
-        @include size(100px, 40px);
-        border-top-left-radius: $border-box;
-        border-top-right-radius: $border-box;
-        border-bottom-left-radius: $border-box;
-        border-bottom-right-radius: $border-box;
-        font-weight: bold;
-    }
-}
 
 .title {
     @include size(65%, empty());

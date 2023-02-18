@@ -1,3 +1,7 @@
+@import '../../scss/utilities/mixins';
+@import '../../scss/utilities/functions';
+@import '../../scss/utilities/variables';
+
 .footer {
     @include flexible(flex, empty(), center, column, empty());
 
