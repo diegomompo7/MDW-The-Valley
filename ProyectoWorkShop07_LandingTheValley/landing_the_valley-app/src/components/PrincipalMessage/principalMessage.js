@@ -2,8 +2,8 @@ import './principalMessage.css'
 
 const PrincipalMessage = (props) =>{
     return <div className="main">
-        <h2>{props.title}</h2>
-        <p>{props.description}</p>
+        <p className="main__title">{props.title}</p>
+        <p className="main__description">{props.description}</p>
     </div>
 }
 

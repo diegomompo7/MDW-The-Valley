@@ -1,0 +1,13 @@
+.main{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 300px;
+    width: 600px;
+}
+.main__title{
+    font-weight: 500;
+    font-size: 50px;
+}
+.main__description{
+    color: #616161;
+}

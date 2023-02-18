@@ -1,0 +1,9 @@
+.footer{
+    background-color: #ededed;
+    height: 17vh;
+    margin-top: 200px;
+}
+.footer__title{
+    padding: 50px;
+    text-align: center;
+}
