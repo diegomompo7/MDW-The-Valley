@@ -1,0 +1,8 @@
+.user-list__table{
+    text-align: left;
+    border-collapse: collapse;
+}
+.user-list__table td, .user-list__table th{
+    border: 1px solid black;
+    padding: 5px;
+}
