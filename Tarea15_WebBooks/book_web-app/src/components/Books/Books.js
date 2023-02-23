@@ -5,6 +5,8 @@ import { useDebounce } from 'use-debounce';
 
 const API_URL = "https://www.googleapis.com/books/v1/volumes?q=";
 
+let bookFiltrer = []
+
 const Books = () => {
 
     const [filter, setFilter] =React.useState([])
@@ -13,26 +15,31 @@ const Books = () => {
 
     React.useEffect(() => {
 
-        if(filter.length <=3){
+        if(filterWithTime.length <=3){
             console.log("Introduce más de 3 caracteres para buscar")
 
         }else{
 
+            bookFiltrer = []
+            console.log(API_URL +filterWithTime)
+
             fetch(API_URL + filterWithTime).then((response)  => {
                 return response.json();
              }).then((data) =>{
-                console.log(data.items)
-                for(let i=0; i<data.items.length;i++){
+                console.log(data)
+                setBookList(data.items)
+                /*for(let i=0; i<data.items.length;i++){
                     let existsAuthor ='authors' in data.items[i].volumeInfo
                     let existsTitle ='title' in data.items[i].volumeInfo
                     let existsImg ='imageLinks' in data.items[i].volumeInfo
                     console.log(existsAuthor, existsTitle, existsImg)
-                    if(existsAuthor === true && existsTitle === true && existsImg=== true){
-                        bookList.push(data.items[i])
+                    if(existsAuthor === true && existsTitle === true && existsImg === true){
+                        setBookList()
                     }
-                }
-                console.log(bookList)
+                }*/
             })
+            console.log(bookFiltrer)
+            console.log(bookList)
         }
 
     }, [filterWithTime]);
@@ -54,12 +61,14 @@ const Books = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {bookList.map((book) => {
-                        <tr key={book.volumeInfo.authors}>
-                            <td>{book.volumeInfo.authors}</td>
-                            <td>{book.volumeInfo.title}</td>
-                        </tr>
-                    })}
+                    {bookList.map((element) => {
+                        return (
+                                <tr key={element.volumeInfo.authors}>
+                                    <td>{element.volumeInfo.authors}</td>
+                                    <td>{element}</td>
+                                </tr>
+                        )
+})}
                 </tbody>
             </table>}
         </div>
