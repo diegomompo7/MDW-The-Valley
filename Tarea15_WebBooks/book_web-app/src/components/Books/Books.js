@@ -23,11 +23,11 @@ const Books = () => {
             bookFiltrer = []
             console.log(API_URL +filterWithTime)
 
-            fetch(API_URL + filterWithTime).then((response)  => {
+            fetch(`${API_URL}${filterWithTime}`).then((response)  => {
                 return response.json();
              }).then((data) =>{
                 console.log(data)
-                setBookList(data.items)
+                setBookList(data)
                 /*for(let i=0; i<data.items.length;i++){
                     let existsAuthor ='authors' in data.items[i].volumeInfo
                     let existsTitle ='title' in data.items[i].volumeInfo
@@ -39,7 +39,7 @@ const Books = () => {
                 }*/
             })
             console.log(bookFiltrer)
-            console.log(bookList)
+            console.log(setBookList)
         }
 
     }, [filterWithTime]);
