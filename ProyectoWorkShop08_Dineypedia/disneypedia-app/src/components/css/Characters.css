@@ -1,0 +1,19 @@
+.items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.items__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin: 10px 10px;
+}
+.items__list--img {
+  margin: 10px auto;
+  width: 80%;
+}
+.items__list--text {
+  color: black;
+}/*# sourceMappingURL=Characters.css.map */
