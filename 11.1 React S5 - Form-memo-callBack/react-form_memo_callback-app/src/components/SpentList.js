@@ -14,6 +14,13 @@ const SpentList = React.memo(() => {
         ammount: 0
     });
 
+    const [total, setTotal] = React.useState(0);
+
+    React.useEffect(() => {
+        const sum = spentList.reduce((acum, spent) => acum + spent.ammount, 0)
+        setTotal(sum)
+    }, [spentList])
+
     const addNewSpent = (event) => {
         event.preventDefault()
         console.log("Bloqueado el comportamiento por defecto del formulario");
@@ -31,12 +38,25 @@ const SpentList = React.memo(() => {
         })
     }
 
+    const deleteSpent = React.useCallback((spent) => {
+        const newSpentList = spentList.filter((item) => item.id !== spent.id)
+        setSpentList(newSpentList);
+    }, [spentList]);
+
     return (
         <div className="spent-list">
             <h2>Listado de gastos estimados:</h2>
 
 
-            {spentList.map((spent) => <SpentItemsMemo key={spent.id} spent={spent}></SpentItemsMemo>)}
+            {spentList.map((spent) => 
+            <SpentItemsMemo 
+                total={total} 
+                key={spent.id} 
+                spent={spent}
+                deleteItem={() => deleteSpent(spent)}>
+            </SpentItemsMemo>)}
+            <p>TOTAL : { total } €</p>
+
             <h2>Añadir nuevo gasto</h2>
 
             <form onSubmit={(event) => addNewSpent(event)}>
@@ -51,7 +71,7 @@ const SpentList = React.memo(() => {
                     <label>Importe estimado del gasto</label>
                     <input type="number" name="ammount" id="ammount" value={newSpent.ammount} onChange={(event) => setNewSpent({
                         ...newSpent,
-                        ammount: event.target.value
+                        ammount: event.target.value ? parseInt(event.target.value) : ''
                     })}></input>
                 </p>
 
