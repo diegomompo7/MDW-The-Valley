@@ -1,0 +1,32 @@
+{
+  "contacts": [
+    {
+      "name": "Pedro",
+      "surname": "Aragón",
+      "phone": "666555444",
+      "imgUrl": "",
+      "id": 2
+    },
+    {
+      "name": "Gonzalo",
+      "surname": "Fdez.-Victorio",
+      "phone": "666555444",
+      "imgUrl": "",
+      "id": 3
+    },
+    {
+      "name": "Eduardo",
+      "surname": "Cuadrado",
+      "phone": "666555444",
+      "imgUrl": "",
+      "id": 4
+    },
+    {
+      "name": "Elena",
+      "surname": "De la Cruz",
+      "phone": "111222333",
+      "imgUrl": "",
+      "id": 5
+    }
+  ]
+}

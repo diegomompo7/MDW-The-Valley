@@ -19,7 +19,7 @@ const SpentList = React.memo(() => {
     React.useEffect(() => {
         const sum = spentList.reduce((acum, spent) => acum + spent.ammount, 0)
         setTotal(sum)
-    }, [spentList])
+    }, [spentList]) 
 
     // Setting up an effect to get all the spents from the API when the component mounts
 
