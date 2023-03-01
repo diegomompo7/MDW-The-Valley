@@ -1,0 +1,30 @@
+.collapsable{
+    border: 1px solid #333;
+    padding: 5px;
+    margin-bottom: 20px;
+    position: relative;
+
+    &__title{
+        font-weight: 600;
+        cursor: pointer;
+    }
+    &__indicator{
+        display: inline-block;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        transform: rotate(90deg);
+
+    }
+    &__body{
+        display: none;
+        margin-top: 10px;
+    }
+
+    &--opened &__body{
+        display: block;
+    }
+    &--opened &__indicator{
+        transform: rotate(270deg);
+    }
+}
