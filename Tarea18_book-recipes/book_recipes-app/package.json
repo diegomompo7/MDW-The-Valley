@@ -1,5 +1,5 @@
 {
-  "name": "react-agenda_contactos-app",
+  "name": "book_recipes-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-contacts-api": "json-server --watch contacts-api.json --port 4000"
+    "start-fake-api": "json-server --watch fake-api.json --port 4000"
   },
   "eslintConfig": {
     "extends": [

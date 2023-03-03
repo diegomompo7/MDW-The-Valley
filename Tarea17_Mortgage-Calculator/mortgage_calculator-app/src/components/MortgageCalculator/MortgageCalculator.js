@@ -51,27 +51,48 @@ const MortgageCalculator = () => {
         return monthPayment;
     }
 
+    const changeInputValue = (ammount, ref) => {
+        const currentValue = parseFloat(ref.current.value)
+        const newValue = currentValue + ammount
+        ref.current.value = newValue
+    }
+
+    const changeInterest = (ammount) => {
+        const currentValue = parseFloat(annualInterestRef.current.value);
+        let newValue = currentValue + ammount;
+        newValue = (Math.round(newValue * 100) / 100).toFixed(2);
+        annualInterestRef.current.value = newValue;
+      }
+
     return (
         <div className="mortgage-calculator">
             {/*VALOR DE LA CASA*/}
             <fieldset className="mortgage-calculator__fieldset">
                 <p>Introduce el valor de la casa:</p>
-                    <button onClick={() => {setDown(5000); setRef(houseValueRef)}}>-</button><input ref={houseValueRef} placeholder="300000" defaultValue="300000" type="number" name="houseValue" id="houseValue"></input><button onClick={() => setUp(5000)}>+</button>
+                    <button onClick={() => {changeInputValue(-5000, houseValueRef)}}>-</button>
+                    <input ref={houseValueRef} placeholder="300000" defaultValue="300000" type="number" name="houseValue" id="houseValue"></input>
+                    <button onClick={() => {changeInputValue(5000, houseValueRef)}}>+</button>
             </fieldset>
             {/*AHORROS APORTADOS*/}
             <fieldset className="mortgage-calculator__fieldset">
                 <p>Ahorros aportados: </p>
-                <button onClick={() => {setDown(1000); setRef(savingsRef)}}>-</button><input ref={savingsRef} placeholder="30000"   defaultValue="30000" type="number" name="savings" id="savings"></input><button onClick={() => setUp(1000)}>+</button>
+                <button onClick={() => {changeInputValue(-1000, savingsRef)}}>-</button>
+                <input ref={savingsRef} placeholder="30000"   defaultValue="30000" type="number" name="savings" id="savings"></input>
+                <button onClick={() => {changeInputValue(1000, savingsRef)}}>+</button>
             </fieldset>
             {/*PLAZO EN AÑOS*/}
             <fieldset className="mortgage-calculator__fieldset">
                 <p>Introduce el plazo en años: </p>
-                <button onClick={() => {setDown(1); setRef(numYearRef)}}>-</button><input ref={numYearRef} placeholder="30"  defaultValue="30" type="number" name="numYear" id="numYear"></input><button onClick={() => setUp(1)} >+</button>
+                <button onClick={() => {changeInputValue(-1, numYearRef)}}>-</button>
+                <input ref={numYearRef} placeholder="30"  defaultValue="30" type="number" name="numYear" id="numYear"></input>
+                <button onClick={() => {changeInputValue(1, numYearRef)}} >+</button>
             </fieldset>
             {/*INTERÉS DE LA HIPOTECA (TIPO FIJO)*/}
             <fieldset className="mortgage-calculator__fieldset">
                 <p>Introduce el interés de la hipoteca (tipo fijo):</p>
-                <button onClick={() => {setDown(0.01); setRef(annualInterestRef)}}>-</button><input ref={annualInterestRef} placeholder="2"  defaultValue="2.50" type="number" name="annualInterest" id="annualInterest"></input><button onClick={() => setUp(0.01)}>+</button>
+                <button onClick={() => {changeInterest(-0.01)}}>-</button>
+                <input ref={annualInterestRef} placeholder="2"  defaultValue="2.50" type="number" name="annualInterest" id="annualInterest"></input>
+                <button onClick={() => {{changeInterest(0.01)}}}>+</button>
             </fieldset>
 
             <button onClick={getValuesAndCalculateMonthlyPayment}>Calcular couta mensual</button>
