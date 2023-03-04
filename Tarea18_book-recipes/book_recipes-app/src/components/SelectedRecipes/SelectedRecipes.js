@@ -22,8 +22,7 @@ const SelectedRecipes = (props) => {
     }
 
     const deleteIngredient = (event, ingredient, id) => {
-        console.log(props.recipeDetail.ingredients)
-        let newArray = props.RecipeDetail.ingredients.filter(delIng => delIng.name != ingredient.name)
+        let newArray = props.recipeDetail.ingredients.filter(delIng => delIng.name !== ingredient.name)
         props.addIngredient(event, {
             ...props.recipeDetail,
             ingredients : newArray
@@ -50,7 +49,7 @@ const SelectedRecipes = (props) => {
                              <tr key={ing.name}>
                                 <td>{ing.name}</td>
                                 <td>{ing.quantity}</td>
-                                <td><button onClick={((event) => deleteIngredient(event, ing, ing.id))}>Eliminar</button></td>
+                                <td><button onClick={((event) => deleteIngredient(event, ing, props.recipeDetail.id))}>Eliminar</button></td>
                              </tr>
                         )}
                         <tr>
