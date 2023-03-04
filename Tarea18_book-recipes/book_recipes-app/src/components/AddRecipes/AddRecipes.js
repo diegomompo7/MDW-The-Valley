@@ -1,7 +1,7 @@
 import './AddRecipes.css'
 import React from "react"
 
-const AddRecipes = (props) => {
+const AddRecipes =  (props) => {
 
     const nameRecipesRef = React.useRef();
     const servingRef = React.useRef();
@@ -9,19 +9,11 @@ const AddRecipes = (props) => {
 
 
     const newRecipeRef = (event) => {
-        console.log(props)
-        console.log(nameRecipesRef.current.value)
-        console.log(servingRef.current.value)
-        console.log(imageUrlRef.current.value)
-        props.setNewRecipe({
+        props.addRecipes(event, {
             name : nameRecipesRef.current.value,
-            serving: servingRef.current.value,
+            numPeople: servingRef.current.value,
             imageUrl: imageUrlRef.current.value
         })
-
-        console.log(props.newRecipe)
-
-        props.addRecipes(event)
 
     }
 

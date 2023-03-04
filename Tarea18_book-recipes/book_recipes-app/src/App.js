@@ -1,19 +1,20 @@
 import './App.css';
 import AddRecipes from './components/AddRecipes/AddRecipes';
 import React from 'react';
+import RecipesList from './components/RecipesList/RecipesList';
 
 const API_URL = "http://localhost:4000/recipes/"
 
 function App() {
+  
+  const [recipeList, setRecipeList] = React.useState([])
 
-  const [newRecipe, setNewRecipe] = React.useState({
-    name: "",
-    serving: 0,
-    imageUrl: "",
-    ingredients : []
-  })
+  React.useEffect(() => {
+    getRecipesList()
+  },[])
 
-  const addRecipes = (event) =>{
+
+  const addRecipes = (event, newRecipe) =>{
     event.preventDefault()
     fetch(API_URL, {
       method : "POST",
@@ -24,18 +25,24 @@ function App() {
     })
     .then(response => response.json())
     .then(data => {
-      setNewRecipe({
-        name : "",
-        serving: 0,
-        imageUrl: ""
-      })
+        getRecipesList()
     })
-
   }
+
+    const getRecipesList = () => {
+      fetch(API_URL)
+      .then(response => response.json())
+      .then(data => {
+        setRecipeList(data)
+      })
+    }
+
+    console.log(recipeList)
 
   return (
     <div className="app">
-      <AddRecipes newRecipe = {newRecipe} setNewRecipe = {setNewRecipe} addRecipes={addRecipes}></AddRecipes>
+      <AddRecipes addRecipes={addRecipes}></AddRecipes>
+      <RecipesList recipesList={recipeList}></RecipesList>
     </div>
   );
 }
