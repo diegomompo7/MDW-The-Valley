@@ -5,14 +5,52 @@
       "numPeople": 4,
       "imageUrl": "https://www.shutterstock.com/image-photo/classic-dish-spain-seafood-paella-600w-1879727512.jpg",
       "id": 1,
-      "ingredients": []
+      "ingredients": [
+        {
+          "name": "Pimiento verde",
+          "quantity": "2 uds"
+        },
+        {
+          "name": "Pimiento rojo",
+          "quantity": "2 uds"
+        },
+        {
+          "name": "Langostino crudo",
+          "quantity": "8 uds"
+        },
+        {
+          "name": "Caldo pescado para paella",
+          "quantity": "1 litro"
+        },
+        {
+          "name": "Arroz",
+          "quantity": "400 grs"
+        }
+      ]
     },
     {
       "name": "Tarta chocolate y galletas",
       "numPeople": 6,
       "imageUrl": "https://www.shutterstock.com/image-photo/homemade-chocolate-rolls-dessert-600w-368330465.jpg",
       "id": 2,
-      "ingredients": []
+      "ingredients": [
+        {
+          "name": "Leche",
+          "quantity": "500 ml"
+        },
+        {
+          "name": "Chocolate para postres",
+          "quantity": "450 grs"
+        },
+        {
+          "name": "Paquetes de galletas",
+          "quantity": "2 uds"
+        },
+        {
+          "name": "Mantequilla",
+          "quantity": "50 grs"
+        }
+      ]
     },
     {
       "name": "Pancake",
