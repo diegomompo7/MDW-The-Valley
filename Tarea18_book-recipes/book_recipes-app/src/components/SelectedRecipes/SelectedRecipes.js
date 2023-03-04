@@ -1,14 +1,13 @@
 import './SelectedRecipes.css'
 import React from "react"
-import AddRecipes from '../AddRecipes/AddRecipes'
 
-const SelectedRecipes = (props) => {
+const SelectedRecipes = React.memo((props) => {
 
     const nameRef = React.useRef()
     const quantityRef = React.useRef()
 
 
-    const newIngredient = (event, id) => {
+    const newIngredient =  React.useCallback((event, id) => {
         props.addIngredient(event, {
             ...props.recipeDetail,
             ingredients : [
@@ -19,16 +18,16 @@ const SelectedRecipes = (props) => {
                 }
             ]
         }, id)
-    }
+    })
 
-    const deleteIngredient = (event, ingredient, id) => {
+    const deleteIngredient =  React.useCallback((event, ingredient, id) => {
         let newArray = props.recipeDetail.ingredients.filter(delIng => delIng.name !== ingredient.name)
         props.addIngredient(event, {
             ...props.recipeDetail,
             ingredients : newArray
         }, id)
 
-    }
+    })
 
     return (
         <div>
@@ -61,5 +60,5 @@ const SelectedRecipes = (props) => {
             </table>
         </div>
     )
-}
+})
 export default SelectedRecipes

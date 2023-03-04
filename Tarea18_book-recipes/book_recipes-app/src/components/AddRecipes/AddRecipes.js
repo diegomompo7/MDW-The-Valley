@@ -1,21 +1,21 @@
 import './AddRecipes.css'
 import React from "react"
 
-const AddRecipes =  (props) => {
+const AddRecipes =  React.memo((props) => {
 
     const nameRecipesRef = React.useRef();
     const servingRef = React.useRef();
     const imageUrlRef = React.useRef();
 
 
-    const newRecipeRef = (event) => {
+    const newRecipeRef =  React.useCallback((event) => {
         props.addRecipes(event, {
             name : nameRecipesRef.current.value,
             numPeople: servingRef.current.value,
             imageUrl: imageUrlRef.current.value
         })
 
-    }
+    })
 
     return (
         <div>
@@ -43,5 +43,5 @@ const AddRecipes =  (props) => {
             </form>
         </div>
     )
-}
+})
 export default AddRecipes

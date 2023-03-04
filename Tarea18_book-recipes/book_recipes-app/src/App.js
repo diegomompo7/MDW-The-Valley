@@ -17,7 +17,7 @@ function App() {
   },[])
 
 
-  const addRecipes = (event, newRecipe) =>{
+  const addRecipes = React.useCallback((event, newRecipe) =>{
     event.preventDefault()
     fetch(API_URL, {
       method : "POST",
@@ -30,25 +30,25 @@ function App() {
     .then(data => {
         getRecipesList()
     })
-  }
+  })
 
-    const getRecipesList = () => {
+    const getRecipesList =  React.useCallback(() => {
       fetch(API_URL)
       .then(response => response.json())
       .then(data => {
         setRecipeList(data)
       })
-    }
+    })
 
-    const getDetailsRecipe = (id) => {
+    const getDetailsRecipe =  React.useCallback((id) => {
       fetch(`${API_URL}/${id}`)
       .then(response => response.json())
       .then(data => {
         setRecipeDetail(data)
       })
-    }
+    })
 
-    const addIngredient = (event, recipe, id) => {
+    const addIngredient =  React.useCallback((event, recipe, id) => {
       event.preventDefault()
       console.log(API_URL+id)
       fetch(`${API_URL}${id}`, {
@@ -62,7 +62,7 @@ function App() {
       .then(data => {
           getDetailsRecipe(id)
       })
-    }
+    })
 
 
     console.log(recipeDetail)

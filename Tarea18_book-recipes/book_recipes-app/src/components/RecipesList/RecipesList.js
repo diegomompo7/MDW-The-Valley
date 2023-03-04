@@ -2,7 +2,7 @@ import './RecipesList.css'
 import React from "react"
 import RecipesItems from './RecipesItems/RecipesItems'
 
-const RecipesList =  (props) => {
+const RecipesList =  React.memo((props) => {
 
     const selectedRecipe = React.useCallback((recipe) => {
         console.log(recipe.id)
@@ -21,5 +21,5 @@ const RecipesList =  (props) => {
             )}
         </div>
     )
-}
+})
 export default RecipesList

@@ -7,24 +7,12 @@
       "id": 1,
       "ingredients": [
         {
-          "name": "Pimiento verde",
-          "quantity": "2 uds"
-        },
-        {
           "name": "Pimiento rojo",
           "quantity": "2 uds"
         },
         {
           "name": "Langostino crudo",
           "quantity": "8 uds"
-        },
-        {
-          "name": "Caldo pescado para paella",
-          "quantity": "1 litro"
-        },
-        {
-          "name": "Arroz",
-          "quantity": "400 grs"
         }
       ]
     },
