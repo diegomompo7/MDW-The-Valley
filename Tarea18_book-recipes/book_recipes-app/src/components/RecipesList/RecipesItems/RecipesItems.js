@@ -4,7 +4,7 @@ import React from "react"
 const RecipesItems =  (props) => {
 
     return (
-        <div>
+        <div onClick={() => props.selectedRecipe()}>
             <img src={props.recipe.imageUrl}></img>
             <div>
                 <p>{props.recipe.name}</p>
