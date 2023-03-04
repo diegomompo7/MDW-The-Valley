@@ -10,6 +10,7 @@ function App() {
   
   const [recipeList, setRecipeList] = React.useState([])
   const [recipeDetail, setRecipeDetail] = React.useState(null)
+  const [updateRecipeDetail, setUpdateRecipeDetail] = React.useState()
 
   React.useEffect(() => {
     getRecipesList()
@@ -47,19 +48,19 @@ function App() {
       })
     }
 
-    const addIngredient = (event, ingredient, id) => {
+    const addIngredient = (event, recipe, id) => {
       event.preventDefault()
       console.log(API_URL+id)
-      fetch(`${API_URL}/${id}`, {
+      fetch(`${API_URL}${id}`, {
         method : "PUT",
-        body : JSON.stringify({ingredients : [ingredient]}),
+        body : JSON.stringify(recipe),
         headers : {
           "Content-Type" : "application/json"
         }
       })
       .then(response => response.json())
       .then(data => {
-          getDetailsRecipe()
+          getDetailsRecipe(id)
       })
     }
 
@@ -70,7 +71,7 @@ function App() {
     <div className="app">
       <AddRecipes addRecipes={addRecipes}></AddRecipes>
       <RecipesList recipesList={recipeList} getDetailsRecipe={getDetailsRecipe}></RecipesList>
-      {(!recipeDetail) ? <p>Selecciona una receta</p> : <SelectedRecipes recipeDetail={recipeDetail} addIngredient={addIngredient}></SelectedRecipes>}
+      {(!recipeDetail) ? <p>Selecciona una receta</p> : <SelectedRecipes recipeDetail={recipeDetail} addIngredient={addIngredient} updateRecipeDetail={updateRecipeDetail} setUpdateRecipeDetail={setUpdateRecipeDetail}></SelectedRecipes>}
     </div>
   );
 }
