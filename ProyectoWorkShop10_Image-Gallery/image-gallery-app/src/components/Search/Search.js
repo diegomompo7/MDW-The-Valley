@@ -1,8 +1,11 @@
 import React from "react"
+import "./Search.css"
 
 const Search = (props) => {
 
     const searchRef = React.useRef()
+
+    
 
     const onSubmit = (event, text) => {
         event.preventDefault()
@@ -11,12 +14,12 @@ const Search = (props) => {
 
 
     return (
-        <div>
+        <div className="header">
             <form onSubmit={(event) => onSubmit(event, searchRef.current.value)}>
-            <input ref={searchRef} type="text"></input>
+            <input className="header__input" placeholder="introduce un texto de búsqueda" ref={searchRef} type="text"></input>
             <button type="submit">Buscar</button>
             </form>
-            <button>Cambiar tema</button>
+            <button className="header__btn-theme">Cambiar tema</button>
         </div>
     )
 }
