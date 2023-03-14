@@ -1,0 +1,26 @@
+.links {
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+  }
+  
+  .links a {
+    font-size: 18px;
+    margin: 5px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .links a.active {
+    text-decoration: underline;
+    color: #3030d7;
+  }
+  
+  .page {
+    text-align: center;
+    padding: 20px;
+  }
