@@ -1,0 +1,27 @@
+.collapsable {
+    border: 1px solid #333;
+    margin-bottom: 10px;
+  }
+  
+  .collapsable__title {
+    position: relative;
+    font-weight: 600;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .collapsable__icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+  
+  .collapsable__body {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #333;
+  }
+  
+  .collapsable__body--opened {
+    display: block;
+  }
