@@ -1,7 +1,8 @@
 import { useForm } from 'react-hook-form';
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
-const RegisterForm = () => {
+const Register = () => {
   const {
     register,
     handleSubmit,
@@ -17,7 +18,7 @@ const RegisterForm = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <fieldset className='register-form__fieldset'>
           <input placeholder='First name' type='text' {...register('firstName', { required: true })} />
-          {errors?.firstName && <p className='register-form__error'>Este campo es obligatorio</p>}
+          {errors?.firstName && <p className='register-form__error'><FormattedMessage id='register_form:required_field' /></p>}
         </fieldset>
         <fieldset className='register-form__fieldset'>
           <input placeholder='Last name' type='text' {...register('lastName', { required: true, minLength: 3 })} />
@@ -37,4 +38,4 @@ const RegisterForm = () => {
   );
 };
 
-export default RegisterForm;
+export default Register;
