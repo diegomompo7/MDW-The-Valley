@@ -1,0 +1,39 @@
+{
+  "name": "s1-intro-scripts-and-files",
+  "version": "0.0.1",
+  "description": "Test node for Node session 1",
+  "main": "sample.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "read": "node read.js",
+    "write": "node write.js",
+    "create-pokemon": "node src/create-pokemon.js",
+    "json-csv": "node src/json-to-csv.js",
+    "prepare": "husky install",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Valley-School/node-s1-intro-scripts-and-files.git"
+  },
+  "keywords": [
+    "Node"
+  ],
+  "author": "Fran Linde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/The-Valley-School/node-s1-intro-scripts-and-files/issues"
+  },
+  "homepage": "https://github.com/The-Valley-School/node-s1-intro-scripts-and-files#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.3"
+  }
+}
