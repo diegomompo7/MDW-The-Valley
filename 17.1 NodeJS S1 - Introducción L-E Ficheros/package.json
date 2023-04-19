@@ -6,13 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "read": "node read.js",
-    "write": "node write.js"
+    "write": "node write.js",
+    "lint" : "eslint src",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/The-Valley-School/node-s1-intro-scripts-and-files.git"
   },
-  "keywords": ["Node"],
+  "keywords": [
+    "Node"
+  ],
   "author": "Fran Linde",
   "license": "ISC",
   "bugs": {
@@ -21,5 +25,13 @@
   "homepage": "https://github.com/The-Valley-School/node-s1-intro-scripts-and-files#readme",
   "dependencies": {
     "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.3"
   }
 }
