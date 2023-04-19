@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run lint
+cd '.\17.1 NodeJS S1 - Introducción L-E Ficheros\' && npm run lint
