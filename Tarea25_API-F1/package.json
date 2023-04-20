@@ -4,11 +4,10 @@
   "description": "Test node for Node session 1",
   "main": "sample.js",
   "scripts": {
+    "start": "node --watch index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "read": "node read.js",
-    "write": "node write.js",
-    "create-pokemon": "node src/create-pokemon.js",
-    "json-csv": "node src/json-to-csv.js",
+    "http-sample": "node ./src/http-sample.js",
+    "routes-sample": "nodemon ./src/routes-sample.js",
     "prepare": "husky install",
     "lint": "eslint src"
   },
@@ -26,6 +25,7 @@
   },
   "homepage": "https://github.com/The-Valley-School/node-s1-intro-scripts-and-files#readme",
   "dependencies": {
+    "express": "^4.18.2",
     "prompt-sync": "^4.2.0"
   },
   "devDependencies": {
@@ -34,6 +34,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.1.1",
-    "husky": "^8.0.3"
+    "husky": "^8.0.3",
+    "nodemon": "^2.0.22"
   }
 }
