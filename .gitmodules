@@ -1,3 +1,6 @@
 [submodule "Node-Workshop12-Oscars"]
 	path = Node-Workshop12-Oscars
 	url = https://github.com/diegomompo7/Node-WorkShop12-Oscars.git
+[submodule "Node-WorkShop12-Oscars"]
+	path = Node-WorkShop12-Oscars
+	url = https://github.com/diegomompo7/Node-WorkShop12-Oscars.git
