@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+cd '.\18.1 Node JS S3 - Intro a MongoDB y Mongoose\' && npm run lint
