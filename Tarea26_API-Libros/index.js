@@ -5,7 +5,7 @@ const { connect } = require("./db.js");
 connect();
 
 // Modelos
-const { User } = require("./model/User.js");
+const { Book } = require("./model/Book.js");
 
 //Creamos router de express
 const PORT = 3000
@@ -22,18 +22,18 @@ router.get("/", (req, res) => {
   });
 
 //Rutas
-router.get("/user", (req, res) => {
-    User.find()
-        .then(users => res.json(users))
+router.get("/book", (req, res) => {
+    Book.find()
+        .then(books=> res.json(books))
         .catch(error => res.status(500).json(error))
 })
 
-router.get("/user/name/:name", async(req, res) => {
-    const name = req.params.name
+router.get("/book/title/:title", async(req, res) => {
+    const title = req.params.title
     try{
-        const user = await User.find({ firstName: new RegExp("^" + name.toLowerCase(), "i") })
-        if(user) {
-            res.json(user)
+        const book = await Book.find({ title: new RegExp("^" + title.toLowerCase(), "i") })
+        if(book) {
+            res.json(book)
         } else {
             res.status(404).json()
         }
@@ -43,13 +43,13 @@ router.get("/user/name/:name", async(req, res) => {
     }
 })
 
-router.get("user/:id", (req, res) => {
+router.get("/book/:id", (req, res) => {
     const id = req.params.id
 
-    User.findById(id)
-        .then((user) => {
-            if(user){
-                res.json(user)
+    Book.findById(id)
+        .then((book) => {
+            if(book){
+                res.json(book)
             }else{
                 res.status(404).json({})
             }
@@ -57,21 +57,22 @@ router.get("user/:id", (req, res) => {
         .catch((error) => res.status(500).json(error))
 })
 
-server.use("/", router)
-server.listen(PORT, () => {
-    console.log(`Server levantado en el puerto ${PORT}`)
-})
 
-router.post("/user", async(req, res) => {
+router.post("/book", async(req, res) => {
     try{
-        const User = new User({
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
-            phone: req.body.phone
+        const book = new Book({
+            title: req.body.title,
+            author: req.body.author,
+            pages: req.body.pages
         })
-    const createdUser = await user.save()
-    return res.status(201).json(createdUser)
+    const createdBook = await book.save()
+    return res.status(201).json(createdBook)
     } catch(error) {
         res.status(500).json(error)
     }
+})
+
+server.use("/", router)
+server.listen(PORT, () => {
+    console.log(`Server levantado en el puerto ${PORT}`)
 })
