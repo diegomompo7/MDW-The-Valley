@@ -1,5 +1,6 @@
 // Conexión a la BBDD;
 const express = require("express")
+const { bookRouter } = require("./routes/book.routes.js")
 
 const { connect } = require("./db.js");
 connect();
@@ -7,72 +8,24 @@ connect();
 // Modelos
 const { Book } = require("./model/Book.js");
 
-//Creamos router de express
 const PORT = 3000
 const server = express()
-const router = express.Router()
-
-//Configuración del server
 server.use(express.json())
 server.use(express.urlencoded({ extented : false }))
 
 //Rutas
+const router = express.Router()
 router.get("/", (req, res) => {
-    res.send("Esta es la home de nuestra API");
+    res.send("Esta es la home de nuestra API de libros");
+    console.log()
   });
-
-//Rutas
-router.get("/book", (req, res) => {
-    Book.find()
-        .then(books=> res.json(books))
-        .catch(error => res.status(500).json(error))
-})
-
-router.get("/book/title/:title", async(req, res) => {
-    const title = req.params.title
-    try{
-        const book = await Book.find({ title: new RegExp("^" + title.toLowerCase(), "i") })
-        if(book) {
-            res.json(book)
-        } else {
-            res.status(404).json()
-        }
-
-    }catch (error) {
-        res.status(500).json(error)
-    }
-})
-
-router.get("/book/:id", (req, res) => {
-    const id = req.params.id
-
-    Book.findById(id)
-        .then((book) => {
-            if(book){
-                res.json(book)
-            }else{
-                res.status(404).json({})
-            }
-        })
-        .catch((error) => res.status(500).json(error))
-})
-
-
-router.post("/book", async(req, res) => {
-    try{
-        const book = new Book({
-            title: req.body.title,
-            author: req.body.author,
-            pages: req.body.pages
-        })
-    const createdBook = await book.save()
-    return res.status(201).json(createdBook)
-    } catch(error) {
-        res.status(500).json(error)
-    }
-})
+router.get("*", (req, res) => {
+    res.status(404).send("Lo sentimos :( No hemos encontrado la página solicitada.");
+});
 
 server.use("/", router)
+server.use("/books", bookRouter)
+
 server.listen(PORT, () => {
     console.log(`Server levantado en el puerto ${PORT}`)
 })
