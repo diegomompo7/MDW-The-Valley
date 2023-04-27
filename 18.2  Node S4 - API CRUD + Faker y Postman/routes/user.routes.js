@@ -8,8 +8,22 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
-    const users = await User.find();
-    res.json(users);
+    const page = parseInt(req.query.Page)
+    const limit = parseInt(req.query.limit)
+    const users = await User.find()
+        .limit(limit)
+        .skip((page - 1) * limit);
+
+
+    const totalElements = await User.countDocuments()
+     
+    const response = {
+        totalItems: totalElements,
+        totalPage: Math.ceil(totalElements / limit),
+        currentPage: page,
+        date: users,
+    }
+    res.json(response);
   } catch (error) {
     res.status(500).json(error);
   }

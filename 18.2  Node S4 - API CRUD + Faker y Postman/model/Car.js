@@ -2,18 +2,22 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // Creamos el schema del usuario
-const userSchema = new Schema(
+const carSchema = new Schema(
   {
-    firstName: {
+    brand: {
       type: String,
       required: true,
     },
-    lastName: {
+    module: {
       type: String,
       required: true,
     },
-    phone: {
-      type: String,
+    plate: {
+        type: String,
+      required: false,
+    },
+    power: {
+        type: String,
       required: false,
     },
   },
@@ -22,5 +26,5 @@ const userSchema = new Schema(
   }
 );
 
-const User = mongoose.model("User", userSchema);
-module.exports = { User };
+const Car = mongoose.model("car", carSchema);
+module.exports = { Car };

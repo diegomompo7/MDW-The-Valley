@@ -7,7 +7,7 @@ const userList = [
   {
     firstName: "Fran",
     lastName: "Linde",
-    phone: 123123123,
+    phone: "123123123",
   },
   {
     firstName: "Edu",
@@ -16,7 +16,7 @@ const userList = [
   {
     firstName: "Gon",
     lastName: "Fernández",
-    phone: 666777888,
+    phone: "666777888",
   },
 ];
 
@@ -24,7 +24,7 @@ for (let i = 0; i < 50; i++) {
   const newUser = {
     firstName: faker.name.firstName(),
     lastName: faker.name.lastName(),
-    phone: faker.phone.number("+34 91 ### ## ##"),
+    phone: faker.phone.number('+34 91 ### ## ##')
   };
   userList.push(newUser);
 }

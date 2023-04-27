@@ -7,6 +7,7 @@
     "start": "node --watch index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed:users": "node ./seeds/user.seed.js",
+    "seed:cars": "node ./seeds/car.seed.js",
     "http-sample": "node ./src/http-sample.js",
     "routes-sample": "nodemon ./src/routes-sample.js",
     "prepare": "husky install",
