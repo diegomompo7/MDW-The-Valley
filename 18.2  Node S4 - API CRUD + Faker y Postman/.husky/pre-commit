@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+cd '.\18.2  Node S4 - API CRUD + Faker y Postman\' && npm run lint
