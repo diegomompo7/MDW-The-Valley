@@ -1,1 +1,17 @@
-/*# sourceMappingURL=Button.css.map */
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+.page__button {
+  height: 30px;
+  border-radius: 5px;
+}
+.page__button--none {
+  background-color: #8a8a8a;
+}
+.page__number {
+  margin: 0 20px 0 20px;
+  color: white;
+}/*# sourceMappingURL=Button.css.map */

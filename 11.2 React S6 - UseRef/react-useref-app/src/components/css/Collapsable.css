@@ -1,0 +1,27 @@
+.collapsable {
+  border: 1px solid #333;
+  padding: 5px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.collapsable__title {
+  font-weight: 600;
+  cursor: pointer;
+}
+.collapsable__indicator {
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transform: rotate(90deg);
+}
+.collapsable__body {
+  display: none;
+  margin-top: 10px;
+}
+.collapsable--opened .collapsable__body {
+  display: block;
+}
+.collapsable--opened .collapsable__indicator {
+  transform: rotate(270deg);
+}/*# sourceMappingURL=Collapsable.css.map */
