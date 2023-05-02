@@ -4,7 +4,7 @@
   "description": "Test node for Node session 1",
   "main": "sample.js",
   "scripts": {
-    "start": "node --watch index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed:users": "node ./seeds/user.seed.js",
     "seed:cars": "node ./seeds/car.seed.js",
