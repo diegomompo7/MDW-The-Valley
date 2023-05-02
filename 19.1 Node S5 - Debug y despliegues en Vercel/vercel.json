@@ -7,7 +7,7 @@
     ],
     "routes": [
       {
-        "src": "/19.1 Node S5 - Debug y despliegues en Vercel(.*)",
+        "src": "/19.1 Node S5 - Debug y despliegues en Vercel/(.*)",
         "dest": "19.1 Node S5 - Debug y despliegues en Vercel/index.js"
       }
     ]
