@@ -4,22 +4,12 @@
     // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-    {
-      "name": "Launch Program",
-      "program": "${workspaceFolder}/app.js",
-      "request": "launch",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "type": "node"
-    },
-        
       {
         "type": "node",
         "request": "launch",
         "name": "Iniciar el programa",
         "skipFiles": ["<node_internals>/**"],
-        "program": "${workspaceFolder}/19.1 Node S5 - Debug y despliegues en Vercel/index.js"
+        "program": "${workspaceFolder}/index.js"
       }
     ]
   }
