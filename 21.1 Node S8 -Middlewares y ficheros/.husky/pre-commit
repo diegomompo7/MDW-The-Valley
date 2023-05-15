@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+cd '.\19.1 Node S5 - Debug y despliegues en Vercel\' && npm run lint
