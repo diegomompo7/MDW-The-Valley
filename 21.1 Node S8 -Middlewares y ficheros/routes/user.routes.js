@@ -7,7 +7,7 @@ const { Car } = require("../model/Car.js")
 // Router propio de usuarios
 const router = express.Router();
 
-router.get("/", async (req, res) => {
+router.get("/", async (req, res, next) => {
   try {
     const page = parseInt(req.query.Page);
     const limit = parseInt(req.query.limit);
@@ -25,11 +25,11 @@ router.get("/", async (req, res) => {
     };
     res.json(response);
   } catch (error) {
-    res.status(500).json(error);
+    next(error)
   }
 });
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", async (req, res, next) => {
   try {
     const id = req.params.id;
     const user = await User.findById(id);
@@ -47,11 +47,11 @@ router.get("/:id", async (req, res) => {
       res.status(404).json({});
     }
   } catch (error) {
-    res.status(500).json(error);
+    next(error)
   }
 });
 
-router.get("/name/:name", async (req, res) => {
+router.get("/name/:name", async (req, res, next) => {
   const name = req.params.name;
 
   try {
@@ -62,23 +62,23 @@ router.get("/name/:name", async (req, res) => {
       res.status(404).json([]);
     }
   } catch (error) {
-    res.status(500).json(error);
+    next(error)
   }
 });
 
 // Endpoint de creación de usuarios
-router.post("/", async (req, res) => {
+router.post("/", async (req, res, next) => {
   try {
     const user = new User(req.body);
 
     const createdUser = await user.save();
     return res.status(201).json(createdUser);
   } catch (error) {
-    res.status(500).json(error);
+    next(error)
   }
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", async (req, res, next) => {
   try {
     const id = req.params.id;
     const userDeleted = await User.findByIdAndDelete(id);
@@ -88,12 +88,12 @@ router.delete("/:id", async (req, res) => {
       res.status(404).json();
     }
   } catch (error) {
-    res.status(500).json(error);
+    next(error)
   }
 });
 
 // CRUD: UPDATE
-router.put("/:id", async (req, res) => {
+router.put("/:id", async (req, res, next) => {
   try {
     const id = req.params.id;
     const userUpdated = await User.findByIdAndUpdate(id, req.body, { new: true });
@@ -103,7 +103,7 @@ router.put("/:id", async (req, res) => {
       res.status(404).json({});
     }
   } catch (error) {
-    res.status(500).json(error);
+    next(error)
   }
 });
 

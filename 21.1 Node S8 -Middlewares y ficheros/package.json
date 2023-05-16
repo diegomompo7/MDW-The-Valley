@@ -33,6 +33,7 @@
     "mongodb": "^5.3.0",
     "mongoose": "^7.0.5",
     "moongose": "^1.0.0",
+    "multer": "^1.4.5-lts.1",
     "on-finished": "^2.4.1",
     "prompt-sync": "^4.2.0"
   },

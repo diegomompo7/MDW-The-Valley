@@ -1,8 +1,12 @@
 const express = require("express")
+const multer = require("multer")
+const fs = require("fs")
 
 const { Brand } = require("../model/Brand.js")
 
 const router = express.Router()
+
+const upload = multer({ dest : "public" })
 
 router.get("/", async (req, res) => {
     try{
@@ -67,19 +71,31 @@ router.get("/name/:name", async (req, res) => {
       res.status(500).json(error);
     }
   });
-  
-  // CRUD: DELETE
-  router.delete("/:id", async (req, res) => {
+
+  router.post("/logo-upload", upload.single("logo"), async (req, res, next) => {
     try {
-      const id = req.params.id;
-      const brandDeleted = await Brand.findByIdAndDelete(id);
-      if (brandDeleted) {
-        res.json(brandDeleted);
+      // Renombrado de la imagen
+      const originalname = req.file.originalname;
+      const path = req.file.path;
+      const newPath = path + "_" + originalname;
+      fs.renameSync(path, newPath);
+  
+      // Busqueda de la marca
+      const brandId = req.body.brandId;
+      const brand = await Brand.findById(brandId);
+  
+      if (brand) {
+        brand.logoImage = newPath;
+        await brand.save();
+        res.json(brand);
+  
+        console.log("Marca modificada correctamente!");
       } else {
-        res.status(404).json({});
+        fs.unlinkSync(newPath);
+        res.status(404).send("Marca no encontrada");
       }
     } catch (error) {
-      res.status(500).json(error);
+      next(error);
     }
   });
   

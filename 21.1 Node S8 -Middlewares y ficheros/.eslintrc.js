@@ -16,5 +16,6 @@ module.exports = {
     "quote-props": [2, "consistent"],
     "multiline-ternary": "off",
     "comma-dangle": "off",
+    "eslint-disable-next-line no-undef": "on"
   },
 };

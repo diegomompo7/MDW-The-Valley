@@ -2,9 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const { userRouter } = require("./routes/user.routes.js");
 const { carRouter } = require("./routes/car.routes.js");
+const { fileUploadRouter } = require("./routes/file-upload.routes.js");
 
 const main = async () => {
-
   // Conexión a la BBDD
   const { connect } = require("./db.js");
   await connect();
@@ -38,7 +38,23 @@ const main = async () => {
   // Usamos las rutas
   server.use("/user", userRouter);
   server.use("/car", carRouter);
+  server.use("/public", express.static("public"));
+  server.use("/file-upload", fileUploadRouter)
   server.use("/", router);
+
+
+  server.use((err, req, res, next) => {
+    console.log("*** INICIO DE ERROR ***")
+    console.log(`PETICIÓN FALLIDA: ${req.method} a la url ${req.originalUrl}`);
+    console.log(err)
+    console.log("*** FIN DEL ERROR ***")
+
+    if (err.name === "ValidationError") {
+      res.status(400).json(err)
+    } else {
+      res.status(500).json(err)
+    }
+  })
 
   server.listen(PORT, () => {
     console.log(`Server levantado en el puerto ${PORT}`);
