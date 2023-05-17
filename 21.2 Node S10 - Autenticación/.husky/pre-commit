@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+cd '.\21.2 Node S10 - Autenticación\' && npm run lint
